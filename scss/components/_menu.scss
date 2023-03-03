@@ -1,0 +1,18 @@
+.menu{
+    position: absolute;
+    left: 95%;
+    top: 3%;
+    cursor: pointer;
+    @media all and (min-width: 20rem) and (max-width: 30rem) {
+        left:89%;
+        top: 0;
+    }
+    @media all and (min-width: 30rem) and (max-width: 48rem) {
+        left:92%;
+        top: 0;
+    }
+    @media all and (min-width: 48rem) and (max-width: 60rem) {
+        left:95%;
+        top: 1.5rem;
+    }
+}

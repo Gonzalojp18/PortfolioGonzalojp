@@ -1,0 +1,49 @@
+.navBar{
+    position: absolute;
+    top: 2rem;
+    width: 90%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+    .link{
+        all: unset;
+        display: flex;
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        li{
+            a{
+                color: #f6f9ff;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9rem;
+                letter-spacing: 0.3em;
+                font-family: "Roboto Flex", sans-serif;
+                &:hover{
+                    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+                    border-radius: 1rem;
+                    transition: all 0.2s ease-in-out;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+    @media all and (min-width: 20rem) and (max-width: 30rem) {
+        top: 1rem;
+        .link{
+            li{
+                a{
+                    font-size: 0.6rem;
+                    letter-spacing: 0.2em;
+                }
+            }
+        }
+    }
+    @media all and (min-width: 30rem) and (max-width: 48rem) {}
+    @media all and (min-width: 48rem) and (max-width: 60rem) {}
+
+}

@@ -1,0 +1,161 @@
+.header {
+    max-width: 95%;
+    margin: 1rem auto 0 auto;
+    height: 95vh;
+
+    .homeName {
+        text-align: left;
+        width: 70%;
+        visibility: visible;
+        padding: 10% 0 0 2%;
+
+        .name {
+            .hi {
+                font-size: 2.5rem;
+                font-weight: 400;
+                color: #cad6dd;
+                font-family: "apercu", sans-serif;
+                -webkit-text-stroke: 1px #cad6dd;
+                font-weight: bold;
+                color: transparent;
+            }
+
+            h1 {
+                color: #dd0d2c;
+                font-size: 3.5rem;
+                font-weight: 700;
+                min-width: 50%;
+            }
+
+            .quote {
+                text-align: left;
+                color: rgba(221, 13, 44, 0.8);
+                font-size: 1.6rem;
+                width: 60%;
+                margin: 1rem 0 1rem 0;
+                font-weight: 700;
+                font-family: "apercu" sans-serif;
+            }
+
+            .intro {
+                width: 45%;
+                font-size: 1rem;
+                margin: 0 0 2rem 0;
+                font-weight: 400;
+                color: #cad6dd;
+            }
+
+            .btn {
+                border-radius: 4rem;
+                border: 2px solid #23153c;
+                width: 15%;
+                padding: 0.3rem;
+                margin-bottom: 4rem;
+                color: #cad6dd;
+                background: linear-gradient(100deg, rgb(181, 5, 61) 20.71%, #88051d);
+
+                &:hover {
+                    background: linear-gradient(100deg, #bfe8e2 20.71%, #ccdedc);
+                    box-shadow: rgb(181, 5, 61) 0px 15px 15px -5px;
+                    transition: all 0.4s ease-in-out;
+                    color: #c50a2d;
+                    border: 2px solid #c50a2d;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: 20rem) and (max-width: 30rem) {
+        .homeName {
+            width: 80%;
+            visibility: visible;
+            padding: 90% 0 0 2%;
+            .name {
+                .hi {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: transparent;
+                }
+                h1 {
+                    color: #dd0d2c;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                .quote {
+                    font-size: 1rem;
+                    width: 80%;
+                    margin: .5rem 0 .5rem 0;
+                    font-weight: 600;
+                }
+                .intro {
+                    width: 100%;
+                    font-size: .7rem;
+                    margin: 0 0 .5rem 0;
+                    font-weight: 200;
+                }
+                .btn {
+                    width: 50%;
+                    margin-bottom: .5rem;
+                }
+        }
+    }
+}
+
+    @media all and (min-width: 30rem) and (max-width: 48rem) {
+        .homeName {
+            width: 80%;
+            .name {
+                .hi {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                h1 {
+                    font-size: 2rem;
+                }
+                .quote {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                .intro {
+                    width: 80%;
+                    font-size: .8rem;
+                    margin: 0 0 1rem 0;
+                }
+                .btn {
+                    width: 50%;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+    @media all and (min-width: 48rem) and (max-width: 60rem){
+        .homeName {
+            width: 80%;
+            padding: 70% 0 0 2%;
+            .name {
+                .hi {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                }
+                .quote {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                .intro {
+                    width: 70%;
+                    font-size: .9rem;
+                    margin: 0 0 1rem 0;
+                }
+                .btn {
+                    width: 30%;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+
+}
