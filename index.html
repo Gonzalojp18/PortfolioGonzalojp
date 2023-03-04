@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <div id="loading">
-        <div class="custom-loader"></div>
-    </div>
     <header>
+        <div id="loading">
+            <div class="custom-loader"></div>
+        </div>
         <span class="scrollDownleft" href="#aboutMe" style="font-size: 10px; color: #f90041;"><i
                 class=" scroll fa-solid fa-angles-up fa-beat-fade mt-50" value="scroll">Scroll Down<i
                     class="fa-solid fa-angles-up fa-beat-fade" value="scroll"></i></i></span>
@@ -57,6 +57,15 @@
         </section>
     </header>
     <main class="sectionMain">
+        <nav class="sticky">
+            <ul class="iconMenu">
+                <li> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="#24153e" d="m12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48"><g fill="none" stroke="#24153e" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" clip-rule="evenodd"/><path d="M24 23a5 5 0 1 0 0-10a5 5 0 0 0 0 10Z"/><path stroke-linecap="round" d="M10.022 38.332C10.366 33.121 14.702 29 20 29h8c5.291 0 9.623 4.11 9.977 9.311"/></g></svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48"><g fill="none"><rect width="40" height="32" x="4" y="8" stroke="#24153e" stroke-linejoin="round" stroke-width="4" rx="3"/><path stroke="#24153e" stroke-width="4" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4v-9Z"/><circle r="2" fill="#24153e" transform="matrix(0 -1 -1 0 10 14)"/><circle r="2" fill="#24153e" transform="matrix(0 -1 -1 0 16 14)"/></g></svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32"><path fill="#24153e" d="M30 30h-8V4h8zm-6-2h4V6h-4zm-4 2h-8V12h8zm-6-2h4V14h-4zm-4 2H2V18h8z"/></svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fill="#24153e" d="M128 224v512a64 64 0 0 0 64 64h640a64 64 0 0 0 64-64V224H128zm0-64h768a64 64 0 0 1 64 64v512a128 128 0 0 1-128 128H192A128 128 0 0 1 64 736V224a64 64 0 0 1 64-64z"/><path fill="#24153e" d="M904 224L656.512 506.88a192 192 0 0 1-289.024 0L120 224h784zm-698.944 0l210.56 240.704a128 128 0 0 0 192.704 0L818.944 224H205.056z"/></svg></li>
+            </ul>
+        </nav>
             <section class="bitMe" id="bitMe">
                 <p><span class="Me">SOY</span> un creativo Desarrollador Web. Y me encantaria compartir un poco más
                     sobre quién esta detrás de este proyecto</p>
@@ -104,6 +113,7 @@
     <script src="./js/nav.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/vanta.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>

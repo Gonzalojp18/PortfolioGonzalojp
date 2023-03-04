@@ -1736,7 +1736,6 @@ nav.active {
   margin: 1rem auto 1rem auto;
   border-radius: 10px;
   background-color: rgba(35, 21, 60, 0.5);
-  animation: bg-color 1s alternate;
 }
 .headerAbout .menuAbout {
   position: relative;
