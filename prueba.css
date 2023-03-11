@@ -1,0 +1,4020 @@
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(35, 21, 60);
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 95%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+  }
+  .header .menu {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .header .menu:hover {
+    animation: rotar 1.5s alternate;
+  }
+  @keyframes rotar {
+    0% {
+      transform: rodtate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .header .presentation {
+    text-align: left;
+    min-width: 40%;
+    visibility: visible;
+  }
+  .header .presentation .name .hi {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cad6dd;
+    font-family: "apercu", sans-serif;
+    -webkit-text-stroke: 1px #cad6dd;
+    font-weight: bold;
+    color: transparent;
+  }
+  .header .presentation .name h1 {
+    color: #dd0d2c;
+    font-size: 4rem;
+    font-weight: 500;
+    min-width: 50%;
+  }
+  .header .presentation .name .quote {
+    text-align: left;
+    color: rgba(221, 13, 44, 0.8);
+    font-size: 1.4rem;
+    width: 50%;
+    margin: 1rem 0 1rem 0;
+    font-weight: 800;
+    font-family: "apercu", sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  .header .presentation .name .intro {
+    width: 45%;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    color: #cad6dd;
+  }
+  .header .presentation .name .btn {
+    border-radius: 4rem;
+    border: 2px solid #23153c;
+    width: 10%;
+    padding: 0.3rem;
+    margin-bottom: 4rem;
+    color: #cad6dd;
+    background: linear-gradient(100deg, rgb(181, 5, 61) 20.71%, #88051d);
+  }
+  .header .presentation .name .btn:hover {
+    background: linear-gradient(100deg, #bfe8e2 20.71%, #ccdedc);
+    box-shadow: rgb(181, 5, 61) 0px 15px 15px -5px;
+    transition: all 0.4s ease-in-out;
+    color: #c50a2d;
+    border: 2px solid #c50a2d;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 82%;
+      top: 0;
+    }
+    .header .presentation {
+      margin-top: 90%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 0.7rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 90%;
+      font-size: 0.5rem;
+      margin: 0.5em 0 0.6em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 30%;
+      border-radius: 0.5em;
+      padding: 0.1rem;
+      font-size: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 88%;
+      font-size: 30px;
+    }
+    .header .presentation {
+      margin-top: 120%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 20%;
+      border-radius: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .header .menu {
+      position: absolute;
+      left: 95%;
+    }
+    .header .presentation {
+      margin-top: 40%;
+    }
+    .header .presentation .name .hi {
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 4rem;
+      padding: 1rem 0 1rem 0;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 70%;
+      letter-spacing: 0;
+      padding: 2rem auto 1rem auto;
+    }
+    .header .presentation .name .intro {
+      width: 60%;
+      font-size: 0.8rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 40%;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 95%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+  }
+  .header .menu {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .header .menu:hover {
+    animation: rotar 1.5s alternate;
+  }
+  @keyframes rotar {
+    0% {
+      transform: rodtate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .header .presentation {
+    text-align: left;
+    min-width: 40%;
+    visibility: visible;
+  }
+  .header .presentation .name .hi {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cad6dd;
+    font-family: "apercu", sans-serif;
+    -webkit-text-stroke: 1px #cad6dd;
+    font-weight: bold;
+    color: transparent;
+  }
+  .header .presentation .name h1 {
+    color: #dd0d2c;
+    font-size: 4rem;
+    font-weight: 500;
+    min-width: 50%;
+  }
+  .header .presentation .name .quote {
+    text-align: left;
+    color: rgba(221, 13, 44, 0.8);
+    font-size: 1.4rem;
+    width: 50%;
+    margin: 1rem 0 1rem 0;
+    font-weight: 800;
+    font-family: "apercu", sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  .header .presentation .name .intro {
+    width: 45%;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    color: #cad6dd;
+  }
+  .header .presentation .name .btn {
+    border-radius: 4rem;
+    border: 2px solid #23153c;
+    width: 10%;
+    padding: 0.3rem;
+    margin-bottom: 4rem;
+    color: #cad6dd;
+    background: linear-gradient(100deg, rgb(181, 5, 61) 20.71%, #88051d);
+  }
+  .header .presentation .name .btn:hover {
+    background: linear-gradient(100deg, #bfe8e2 20.71%, #ccdedc);
+    box-shadow: rgb(181, 5, 61) 0px 15px 15px -5px;
+    transition: all 0.4s ease-in-out;
+    color: #c50a2d;
+    border: 2px solid #c50a2d;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 82%;
+      top: 0;
+    }
+    .header .presentation {
+      margin-top: 90%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 0.7rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 90%;
+      font-size: 0.5rem;
+      margin: 0.5em 0 0.6em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 30%;
+      border-radius: 0.5em;
+      padding: 0.1rem;
+      font-size: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 88%;
+      font-size: 30px;
+    }
+    .header .presentation {
+      margin-top: 120%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 20%;
+      border-radius: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .header .menu {
+      position: absolute;
+      left: 95%;
+    }
+    .header .presentation {
+      margin-top: 40%;
+    }
+    .header .presentation .name .hi {
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 4rem;
+      padding: 1rem 0 1rem 0;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 70%;
+      letter-spacing: 0;
+      padding: 2rem auto 1rem auto;
+    }
+    .header .presentation .name .intro {
+      width: 60%;
+      font-size: 0.8rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 40%;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  
+  .headerAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 100%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+    background-color: rgba(35, 21, 60, 0.5);
+    animation: bg-color 1s alternate;
+  }
+  .headerAbout .menuAbout {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    cursor: pointer;
+  }
+  .headerAbout .menuAbout:hover {
+    animation: rotar 1.5s alternate;
+  }
+  .headerAbout .bitMe {
+    margin: 0 8% 0 0;
+    width: 80%;
+    font-size: 2.5rem;
+    color: #effffe;
+    font-weight: 600;
+    height: 20%;
+  }
+  .headerAbout .bitMe span {
+    background-color: #dfc22c;
+    color: #effffe;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+  .headerAbout .whoIam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    color: #effffe;
+  }
+  .headerAbout .whoIam .headingTwo {
+    margin: 0 7rem 0 1rem;
+    font-size: 12rem;
+    font-weight: bold;
+    color: rgba(61, 16, 115, 0.2);
+    position: sticky;
+    top: 100%;
+    width: 40%;
+  }
+  .headerAbout .whoIam .description {
+    font-size: 1rem;
+    width: 60%;
+    text-align: justify;
+  }
+  .headerAbout .whoIam .description * {
+    padding-bottom: 0 0 1rem 0;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .headerAbout .menuAbout {
+      top: 0;
+      left: 48%;
+    }
+    .headerAbout .bitMe {
+      width: 90%;
+      font-size: 0.7rem;
+    }
+    .headerAbout .bitMe span {
+      color: #e5edf1;
+      padding: 0.2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam {
+      width: 100%;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 2px 0 0;
+      font-size: 4.5rem;
+      font-weight: bold;
+      top: 20%;
+      width: 20%;
+      writing-mode: vertical-rl;
+      box-orient: vertical;
+      direction: rtl;
+      transform: rotate(180deg);
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 0.5rem;
+      width: 80%;
+      text-align: justify;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .headerAbout .menuAbout {
+      top: 0;
+      left: 49%;
+    }
+    .headerAbout .bitMe {
+      font-size: 1.5rem;
+    }
+    .headerAbout .bitMe span {
+      padding: 0.3rem;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 0 0 0;
+      font-size: 6rem;
+      top: 50%;
+      width: 20%;
+      writing-mode: vertical-rl;
+      box-orient: vertical;
+      direction: rtl;
+      transform: rotate(180deg);
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      width: 80%;
+      text-align: justify;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .headerAbout .bitMe {
+      font-size: 2.3rem;
+    }
+    .headerAbout .bitMe span {
+      padding: 0.3rem;
+      font-size: 2.4rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 2rem 0 0;
+      font-size: 10rem;
+      font-weight: bold;
+      color: rgba(61, 16, 115, 0.2);
+      position: sticky;
+      top: 100%;
+      width: 40%;
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 60%;
+      text-align: justify;
+    }
+  }
+  
+  html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(35, 21, 60);
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 95%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+  }
+  .header .menu {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .header .menu:hover {
+    animation: rotar 1.5s alternate;
+  }
+  @keyframes rotar {
+    0% {
+      transform: rodtate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .header .presentation {
+    text-align: left;
+    min-width: 40%;
+    visibility: visible;
+  }
+  .header .presentation .name .hi {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cad6dd;
+    font-family: "apercu", sans-serif;
+    -webkit-text-stroke: 1px #cad6dd;
+    font-weight: bold;
+    color: transparent;
+  }
+  .header .presentation .name h1 {
+    color: #dd0d2c;
+    font-size: 4rem;
+    font-weight: 500;
+    min-width: 50%;
+  }
+  .header .presentation .name .quote {
+    text-align: left;
+    color: rgba(221, 13, 44, 0.8);
+    font-size: 1.4rem;
+    width: 50%;
+    margin: 1rem 0 1rem 0;
+    font-weight: 800;
+    font-family: "apercu", sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  .header .presentation .name .intro {
+    width: 45%;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    color: #cad6dd;
+  }
+  .header .presentation .name .btn {
+    border-radius: 4rem;
+    border: 2px solid #23153c;
+    width: 10%;
+    padding: 0.3rem;
+    margin-bottom: 4rem;
+    color: #cad6dd;
+    background: linear-gradient(100deg, rgb(181, 5, 61) 20.71%, #88051d);
+  }
+  .header .presentation .name .btn:hover {
+    background: linear-gradient(100deg, #bfe8e2 20.71%, #ccdedc);
+    box-shadow: rgb(181, 5, 61) 0px 15px 15px -5px;
+    transition: all 0.4s ease-in-out;
+    color: #c50a2d;
+    border: 2px solid #c50a2d;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 82%;
+      top: 0;
+    }
+    .header .presentation {
+      margin-top: 90%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 0.7rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 90%;
+      font-size: 0.5rem;
+      margin: 0.5em 0 0.6em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 30%;
+      border-radius: 0.5em;
+      padding: 0.1rem;
+      font-size: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 88%;
+      font-size: 30px;
+    }
+    .header .presentation {
+      margin-top: 120%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 20%;
+      border-radius: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .header .menu {
+      position: absolute;
+      left: 95%;
+    }
+    .header .presentation {
+      margin-top: 40%;
+    }
+    .header .presentation .name .hi {
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 4rem;
+      padding: 1rem 0 1rem 0;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 70%;
+      letter-spacing: 0;
+      padding: 2rem auto 1rem auto;
+    }
+    .header .presentation .name .intro {
+      width: 60%;
+      font-size: 0.8rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 40%;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  nav {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
+  }
+  nav .link {
+    all: unset;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  nav .link li a {
+    color: #f6f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    font-family: "Roboto Flex", sans-serif;
+  }
+  nav .link li a:hover {
+    background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav {
+      clip-path: circle(0% at 110% 0);
+    }
+    nav .link li a {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    nav .link li a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+    }
+    nav .link li a:hover {
+      background-color: #e6b908;
+      border-radius: 1rem;
+      transition: all 0.1s ease-in-out;
+      padding: 1rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav {
+      clip-path: circle(0 at 100% 0);
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 95%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+  }
+  .header .menu {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .header .menu:hover {
+    animation: rotar 1.5s alternate;
+  }
+  @keyframes rotar {
+    0% {
+      transform: rodtate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .header .presentation {
+    text-align: left;
+    min-width: 40%;
+    visibility: visible;
+  }
+  .header .presentation .name .hi {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cad6dd;
+    font-family: "apercu", sans-serif;
+    -webkit-text-stroke: 1px #cad6dd;
+    font-weight: bold;
+    color: transparent;
+  }
+  .header .presentation .name h1 {
+    color: #dd0d2c;
+    font-size: 4rem;
+    font-weight: 500;
+    min-width: 50%;
+  }
+  .header .presentation .name .quote {
+    text-align: left;
+    color: rgba(221, 13, 44, 0.8);
+    font-size: 1.4rem;
+    width: 50%;
+    margin: 1rem 0 1rem 0;
+    font-weight: 800;
+    font-family: "apercu", sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  .header .presentation .name .intro {
+    width: 45%;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    color: #cad6dd;
+  }
+  .header .presentation .name .btn {
+    border-radius: 4rem;
+    border: 2px solid #23153c;
+    width: 10%;
+    padding: 0.3rem;
+    margin-bottom: 4rem;
+    color: #cad6dd;
+    background: linear-gradient(100deg, rgb(181, 5, 61) 20.71%, #88051d);
+  }
+  .header .presentation .name .btn:hover {
+    background: linear-gradient(100deg, #bfe8e2 20.71%, #ccdedc);
+    box-shadow: rgb(181, 5, 61) 0px 15px 15px -5px;
+    transition: all 0.4s ease-in-out;
+    color: #c50a2d;
+    border: 2px solid #c50a2d;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 82%;
+      top: 0;
+    }
+    .header .presentation {
+      margin-top: 90%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 0.7rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 90%;
+      font-size: 0.5rem;
+      margin: 0.5em 0 0.6em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 30%;
+      border-radius: 0.5em;
+      padding: 0.1rem;
+      font-size: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .header {
+      justify-content: center;
+    }
+    .header .menu {
+      position: absolute;
+      left: 88%;
+      font-size: 30px;
+    }
+    .header .presentation {
+      margin-top: 120%;
+      text-align: left;
+    }
+    .header .presentation .name .hi {
+      width: 100%;
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 80%;
+      letter-spacing: 0;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+    .header .presentation .name .intro {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 20%;
+      border-radius: 0.5em;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .header .menu {
+      position: absolute;
+      left: 95%;
+    }
+    .header .presentation {
+      margin-top: 40%;
+    }
+    .header .presentation .name .hi {
+      font-size: 2rem;
+    }
+    .header .presentation .name h1 {
+      color: #dd0d2c;
+      font-size: 4rem;
+      padding: 1rem 0 1rem 0;
+    }
+    .header .presentation .name .quote {
+      font-size: 1rem;
+      width: 70%;
+      letter-spacing: 0;
+      padding: 2rem auto 1rem auto;
+    }
+    .header .presentation .name .intro {
+      width: 60%;
+      font-size: 0.8rem;
+      margin: 0.5em 0 1em 0;
+    }
+    .header .presentation .name .btn {
+      border: 2px solid #dc1835;
+      width: 40%;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    .header .presentation .scroll {
+      display: none;
+    }
+  }
+  
+  .headerAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    max-width: 100%;
+    height: 95vh;
+    margin: 1rem auto 1rem auto;
+    border-radius: 10px;
+    background-color: rgba(35, 21, 60, 0.5);
+    animation: bg-color 1s alternate;
+  }
+  .headerAbout .menuAbout {
+    position: relative;
+    left: 45%;
+    top: 1rem;
+    cursor: pointer;
+  }
+  .headerAbout .menuAbout:hover {
+    animation: rotar 1.5s alternate;
+  }
+  .headerAbout .bitMe {
+    margin: 0 8% 0 0;
+    width: 80%;
+    font-size: 2.5rem;
+    color: #effffe;
+    font-weight: 600;
+    height: 20%;
+  }
+  .headerAbout .bitMe span {
+    background-color: #dfc22c;
+    color: #effffe;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+  .headerAbout .whoIam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    color: #effffe;
+  }
+  .headerAbout .whoIam .headingTwo {
+    margin: 0 7rem 0 1rem;
+    font-size: 12rem;
+    font-weight: bold;
+    color: rgba(61, 16, 115, 0.2);
+    position: sticky;
+    top: 100%;
+    width: 40%;
+  }
+  .headerAbout .whoIam .description {
+    font-size: 1rem;
+    width: 60%;
+    text-align: justify;
+  }
+  .headerAbout .whoIam .description * {
+    padding-bottom: 0 0 1rem 0;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .headerAbout .menuAbout {
+      top: 0;
+      left: 48%;
+    }
+    .headerAbout .bitMe {
+      width: 90%;
+      font-size: 0.7rem;
+    }
+    .headerAbout .bitMe span {
+      color: #e5edf1;
+      padding: 0.2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam {
+      width: 100%;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 2px 0 0;
+      font-size: 4.5rem;
+      font-weight: bold;
+      top: 20%;
+      width: 20%;
+      writing-mode: vertical-rl;
+      box-orient: vertical;
+      direction: rtl;
+      transform: rotate(180deg);
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 0.5rem;
+      width: 80%;
+      text-align: justify;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .headerAbout .menuAbout {
+      top: 0;
+      left: 49%;
+    }
+    .headerAbout .bitMe {
+      font-size: 1.5rem;
+    }
+    .headerAbout .bitMe span {
+      padding: 0.3rem;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 0 0 0;
+      font-size: 6rem;
+      top: 50%;
+      width: 20%;
+      writing-mode: vertical-rl;
+      box-orient: vertical;
+      direction: rtl;
+      transform: rotate(180deg);
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      width: 80%;
+      text-align: justify;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .headerAbout .bitMe {
+      font-size: 2.3rem;
+    }
+    .headerAbout .bitMe span {
+      padding: 0.3rem;
+      font-size: 2.4rem;
+      letter-spacing: 0.4rem;
+    }
+    .headerAbout .whoIam .headingTwo {
+      margin: 0 2rem 0 0;
+      font-size: 10rem;
+      font-weight: bold;
+      color: rgba(61, 16, 115, 0.2);
+      position: sticky;
+      top: 100%;
+      width: 40%;
+    }
+    .headerAbout .whoIam .description {
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 60%;
+      text-align: justify;
+    }
+  }
+  
+  #img {
+    display: none;
+    position: relative;
+    right: 70%;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #472c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cad6dd;
+    font-size: 1.5rem;
+  }
+  #loading .custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+  }
+  #loading .custom-loader::before,
+  #loading .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #F41C52 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+  }
+  #loading .custom-loader::before {
+    margin: 8px;
+    filter: hue-rotate(45deg);
+    background-size: 16px 16px;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes s2 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+  nav.active {
+    clip-path: circle(90% at 16% 120%);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    nav.active {
+      clip-path: circle(100% at 0 60%);
+    }
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    nav.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    nav.active {
+      clip-path: circle(100% at 0 57%);
+    }
+  }
+  
+  .menuProject {
+    position: absolute;
+    left: 90%;
+    top: 2rem;
+    z-index: 800;
+  }
+  .menuProject:hover {
+    animation: rotar 1.5s alternate;
+  }
+  
+  .navProject.active {
+    clip-path: circle(100% at 16% 0);
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 60%);
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .navProject.active {
+      clip-path: circle(100% at 0 70%);
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .navProject.active {
+      clip-path: circle(40% at 0 57%);
+    }
+  }
+  
+  #mensagge {
+    all: unset;
+    border-radius: 1rem;
+    min-height: 15%;
+    min-width: 15%;
+    box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+    border-radius: 1rem;
+    color: #cad6dd;
+    clip-path: circle(0 at 100% 0);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  @media all and (max-width: 480px) {
+    #mensagge {
+      font-size: 0.8em;
+      width: 40%;
+      padding-top: 2rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (max-width: 768px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 4rem;
+      font-weight: bold;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    #mensagge {
+      font-size: 1em;
+      width: 40%;
+      padding-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  #mensagge.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 23% 76%, 0% 75%);
+  }
+  
+  .welcome {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    height: 40vh;
+    bottom: 70%;
+    min-width: 50%;
+    color: #cad6dd;
+    border-radius: 1rem;
+    font-size: 0.9em;
+    background-color: rgba(202, 214, 221, 0.2);
+  }
+  .welcome label {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome button {
+    border: none;
+    margin: 6rem 0 0 0;
+    min-width: 20%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    color: #afafbc;
+    background-color: #dc1835;
+  }
+  .welcome button:hover {
+    background-color: #dc1835;
+    transition: all 0.4s ease-in-out;
+    color: #afafbc;
+    border: 2px solid #afafbc;
+  }
+  .welcome input::placeholder {
+    color: #afafbc;
+    font-size: 1em;
+  }
+  .welcome input {
+    border: none;
+    margin: 4rem 0 0 0;
+    all: unset;
+    width: 60%;
+    color: #afafbc;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .welcome input:hover {
+    background: none;
+    border: none;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      height: 40vh;
+      right: 10%;
+    }
+    .welcome button {
+      font-size: 0.9em;
+      width: 20%;
+      padding: 0.3em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 2.5rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.4em;
+      width: 90%;
+      right: 8%;
+      height: 60vh;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 1rem auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.6rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 920px) {
+    .welcome {
+      bottom: 40%;
+      font-size: 0.8em;
+      width: 70%;
+      height: 60vh;
+      font-size: 0.6em;
+      bottom: 85%;
+      right: 14%;
+    }
+    .welcome button {
+      width: 20%;
+      font-size: 1em;
+      margin: 2% auto 1rem auto;
+    }
+    .welcome input {
+      width: 80%;
+      font-size: 0.8rem;
+      margin: 3rem auto 1rem auto;
+    }
+  }
+  
+  .navProject {
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 800;
+  }
+  
+  .mainProject {
+    position: relative;
+    height: 400vh;
+    background-color: #23153c;
+    overflow: hidden;
+  }
+  .mainProject .internal {
+    background-color: #dfc22c;
+    height: 80%;
+    display: flex;
+    width: 370vw;
+    overflow: hidden;
+  }
+  .mainProject .internal #title {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    font-size: 8rem;
+    font-weight: bold;
+  }
+  .mainProject .internal .card {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    max-width: 10%;
+    height: 20%;
+  }
+  .mainProject .internal .card:hover {
+    transform: scale(2.2);
+    transition: 4s ease-in;
+  }
+  .mainProject .internal .frontEnd {
+    position: absolute;
+    top: 20%;
+    left: 14%;
+  }
+  .mainProject .internal .frontEnd h4 {
+    font-size: 6rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(35, 21, 60);
+    color: transparent;
+    font-family: Neuemontreal, sans-serif;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .mainProject .internal {
+      width: 150vw;
+      flex-direction: column;
+    }
+    .mainProject .internal #title {
+      top: 2%;
+      font-size: 3rem;
+    }
+    .mainProject .internal .card {
+      top: 8%;
+    }
+    .mainProject .internal .frontEnd {
+      position: absolute;
+      top: 25%;
+      left: 8%;
+    }
+    .mainProject .internal .frontEnd h4 {
+      font-size: 3rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .mainProject .internal {
+      width: 150vw;
+      flex-direction: column;
+    }
+    .mainProject .internal #title {
+      top: 2%;
+      font-size: 3rem;
+    }
+    .mainProject .internal .card {
+      top: 8%;
+    }
+    .mainProject .internal .frontEnd {
+      left: 12%;
+    }
+    .mainProject .internal .frontEnd h4 {
+      font-size: 4rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .mainProject .internal {
+      width: 150vw;
+      flex-direction: column;
+    }
+    .mainProject .internal #title {
+      top: 2%;
+      font-size: 3rem;
+    }
+    .mainProject .internal .card {
+      top: 8%;
+    }
+    .mainProject .internal .frontEnd {
+      left: 12%;
+    }
+    .mainProject .internal .frontEnd h4 {
+      font-size: 4rem;
+    }
+  }
+  
+  .boxSkill #projectDetails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 18%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    left: 6%;
+    top: 30%;
+    margin: 4% 0 0 0;
+    opacity: 1;
+    background-color: rgb(35, 21, 60);
+  }
+  .boxSkill #projectDetails .skill {
+    background-color: #dfc22c;
+    width: 18%;
+    height: 30%;
+    margin: 2rem 1rem 0 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: #dfc22c 0px 2px 5px;
+  }
+  .boxSkill #projectDetails .skill:hover {
+    transform: skew(5deg);
+    transition: 0.2s ease-in-out;
+  }
+  .boxSkill #projectDetails .skill .textSkil {
+    font-size: 0.7rem;
+    color: #23153c;
+    width: 80%;
+    margin: 0.5rem auto 0 auto;
+  }
+  .boxSkill #projectDetails .titleSkill {
+    position: absolute;
+    right: 100%;
+    writing-mode: vertical-rl;
+    box-orient: vertical;
+    direction: ltr;
+    transform: rotate(180deg);
+    color: rgb(35, 21, 60);
+    font-weight: bold;
+  }
+  .boxSkill #projectDetails .titleSkill h2 {
+    font-size: 6rem;
+  }
+  .boxSkill #projectDetails .titleSkill p {
+    font-size: 5rem;
+    -webkit-text-stroke: 1px rgb(35, 21, 60);
+    color: transparent;
+  }
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    .boxSkill #projectDetails {
+      height: 100vh;
+      margin: 30% 0 5% 0;
+      width: 60%;
+      left: 3.5%;
+      padding: 1rem;
+    }
+    .boxSkill #projectDetails .skill {
+      width: 40%;
+      height: 20%;
+      margin: 0.5rem 0.4rem 0.5rem 0.4rem;
+      padding: 0.2em;
+    }
+    .boxSkill #projectDetails .skill .textSkil {
+      font-size: 0.3rem;
+      color: #23153c;
+      width: 80%;
+      margin: 0 auto 0 auto;
+    }
+    .boxSkill #projectDetails .titleSkill {
+      left: 10%;
+      bottom: 100%;
+      writing-mode: horizontal-tb;
+      box-orient: horizontal;
+      direction: ltr;
+      transform: rotate(0);
+    }
+    .boxSkill #projectDetails .titleSkill h2 {
+      font-size: 2.5rem;
+    }
+    .boxSkill #projectDetails .titleSkill p {
+      font-size: 2rem;
+    }
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .boxSkill #projectDetails {
+      height: 100vh;
+      margin: 30% 0 5% 0;
+      width: 60%;
+      left: 3.5%;
+      padding: 1rem;
+    }
+    .boxSkill #projectDetails .skill {
+      width: 40%;
+      height: 20%;
+      margin: 0.5rem 0.4rem 0.5rem 0.4rem;
+      padding: 0.3em;
+    }
+    .boxSkill #projectDetails .skill .textSkil {
+      font-size: 0.7rem;
+    }
+    .boxSkill #projectDetails .titleSkill {
+      left: 10%;
+      bottom: 100%;
+      writing-mode: horizontal-tb;
+      box-orient: horizontal;
+      direction: ltr;
+      transform: rotate(0);
+    }
+    .boxSkill #projectDetails .titleSkill h2 {
+      font-size: 3rem;
+    }
+    .boxSkill #projectDetails .titleSkill p {
+      font-size: 2.5rem;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 990px) {
+    .boxSkill #projectDetails {
+      margin: 30% 0 5% 0;
+    }
+    .boxSkill #projectDetails .skill {
+      width: 40%;
+      height: 20%;
+      margin: 0.5rem 0.4rem 0.5rem 0.4rem;
+      padding: 0.4em;
+    }
+    .boxSkill #projectDetails .skill .textSkil {
+      font-size: 0.9rem;
+    }
+    .boxSkill #projectDetails .titleSkill {
+      left: 10%;
+      bottom: 100%;
+      writing-mode: horizontal-tb;
+      box-orient: horizontal;
+      direction: ltr;
+      transform: rotate(0);
+    }
+    .boxSkill #projectDetails .titleSkill h2 {
+      font-size: 4rem;
+    }
+    .boxSkill #projectDetails .titleSkill p {
+      font-size: 3rem;
+    }
+  }

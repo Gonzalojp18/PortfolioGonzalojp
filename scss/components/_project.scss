@@ -1,0 +1,68 @@
+
+.main{
+    overflow: hidden;
+    height: 600vh;
+    margin-top: 4rem;
+    .mainProject{
+        width: 800vw;
+        height: 100vh;
+        background-color: #dfc22c;
+        .descriptionProject{
+            display: flex;
+            .infoProject{
+                text-align: center;
+                font-size: 1.6rem;
+                width: 80%;
+                position: absolute;
+                left: 8%;
+                top: 3.8%;
+            }
+            .title{
+                position: relative;
+                padding-top: 0%;
+                left: 8%;
+                font-size: 8rem;
+                font-weight: bold;
+                color: #f3f3f3;
+            }
+            .frontEnd {
+                position: absolute;
+                top: 12%;
+                left: 15%;
+                h4 {
+                    font-size: 6rem;
+                    font-weight: bold;
+                    -webkit-text-stroke: 1px rgb(35, 21, 60);
+                    color: transparent;
+                    font-family: Neuemontreal, sans-serif;
+                }
+            }
+        }
+    }
+    @media all and (min-width: 20rem) and (max-width: 30rem) {
+        .mainProject{
+            .descriptionProject{
+                .infoProject{
+                    font-size: .8rem;
+                    width: 90%;
+                    top: 2%;
+                }
+                .title{
+                    font-size: 4rem;
+                    left: 2%;
+                }
+                .frontEnd {
+                    position: absolute;
+                    top: 12%;
+                    left: 12%;
+                    h4{
+                        font-size: 2rem;
+                    }
+            }
+        }
+        }
+
+    }
+    @media all and (min-width: 30rem) and (max-width: 48rem){}
+    @media all and (min-width: 48rem) and (max-width: 60rem){}
+}

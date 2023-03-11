@@ -1,15 +1,14 @@
 .sectionMain {
-    height: 300vh;
     margin: auto;
     padding: 2rem 0 0 0;
     border-radius: 10px;
-    max-width: 95%;
+    width: 95%;
     .bitMe {
         margin: 0;
         width: 70%;
-        font-size: 2rem;
+        font-size: 3rem;
         color: #f2f7f7;
-        font-weight: 700;
+        font-weight: 200;
         height: 10%;
         padding: 1rem;
         span {
@@ -34,12 +33,12 @@
             font-weight: bold;
             color: rgba(61, 16, 115, 0.2);
             position: relative;
-            top:2%;
+            top:5%;
             width: 60%;
         }
 
         .description {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             width: 50%;
             text-align: justify;
             padding: 0 1rem 0 1rem;
