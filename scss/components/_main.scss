@@ -6,7 +6,7 @@
     .bitMe {
         margin: 0;
         width: 70%;
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #f2f7f7;
         font-weight: 200;
         height: 10%;
@@ -31,14 +31,13 @@
             display: flex;
             font-size: 7.5rem;
             font-weight: bold;
-            color: rgba(61, 16, 115, 0.2);
+            color: #dfc22c;
             position: relative;
             top:5%;
             width: 60%;
         }
-
         .description {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             width: 50%;
             text-align: justify;
             padding: 0 1rem 0 1rem;
@@ -47,13 +46,13 @@
         @media all and (min-width: 20rem) and (max-width: 30rem) {
             margin: 0;
             .bitMe {
-                width: 90%;
-                font-size: 1rem;
+                width: 100%;
+                font-size: 1.3rem;
                 span {
                     color: #e5edf1;
                     padding: 0.2rem;
                     border-radius: 10px;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     letter-spacing: 0.4rem;
                 }
             }
@@ -62,16 +61,16 @@
                 .headingTwo {
                     flex-direction: column;
                     margin: 0;
-                    font-size: 1.5rem;
+                    font-size: 2.5rem;
                     font-weight: bold;
-                    top: 5%;
-                    left: 5%;
+                    top: 1%;
+                    left: 2%;
                     box-orient: vertical;
                 }
                 .description {
-                    font-size: 0.6rem;
-                    width: 90%;
-                    margin: 0 0 0 .5rem;
+                    font-size: .8rem;
+                    width: 100%;
+                    margin: 0;
                     text-align: justify;
                 }
             }
@@ -80,13 +79,13 @@
         margin: 0;
             .bitMe {
                 width: 90%;
-                font-size: 1rem;
+                font-size: 1.5rem;
                 height: 5%;
                 span {
                     color: #e5edf1;
                     padding: 0.2rem;
                     border-radius: 10px;
-                    font-size: 1rem;
+                    font-size: 2rem;
                     letter-spacing: 0.4rem;
                 }
             }
@@ -95,18 +94,49 @@
                 .headingTwo {
                     flex-direction: column;
                     margin: 0;
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     font-weight: bold;
-                    top: 5%;
-                    left: 5%;
+                    top: 2%;
+                    left: 3%;
                     box-orient: vertical;
                 }
                 .description {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     width: 80%;
                     text-align: justify;
                 }
             }
     }
-    @media all and (min-width: 48rem) and (max-width: 60rem){}
+    @media all and (min-width: 48rem) and (max-width: 60rem){
+        margin: 0;
+        .bitMe {
+            width: 90%;
+            font-size: 1.8rem;
+            height: 5%;
+            span {
+                color: #e5edf1;
+                padding: 0.2rem;
+                border-radius: 10px;
+                font-size: 2rem;
+                letter-spacing: 0.4rem;
+            }
+        }
+        .whoIam {
+            width: 100%;
+            .headingTwo {
+                flex-direction: column;
+                margin: 0;
+                font-size: 3rem;
+                font-weight: bold;
+                top: 0;
+                left: 10%;
+                box-orient: vertical;
+            }
+            .description {
+                font-size: 1.2rem;
+                width: 90%;
+                text-align: justify;
+            }
+        }
+    }
 }

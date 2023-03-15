@@ -52,12 +52,22 @@
 
     }
     @media all and (min-width: 20rem) and (max-width: 30rem) {
-        .mainProject{
-            .descriptionProject{
-                .infoProject{
+        .mainProject {
+                .infoProject {
                     font-size: .8rem;
-                    width: 90%;
-                    top: 2%;
+                    width: 100%;
+                    top: 1%;
+                    left: 2%;
+                    .details {
+                        margin: 2rem;
+                        width: 40%;
+                        .titlePorject {
+                            padding: .5rem;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
                 .title{
                     font-size: 4rem;
@@ -65,16 +75,73 @@
                 }
                 .frontEnd {
                     position: absolute;
-                    top: 12%;
+                    top: 15%;
                     left: 12%;
                     h4{
                         font-size: 2rem;
                     }
             }
         }
-        }
 
     }
-    @media all and (min-width: 30rem) and (max-width: 48rem){}
-    @media all and (min-width: 48rem) and (max-width: 60rem){}
+    @media all and (min-width: 30rem) and (max-width: 48rem){
+        .mainProject {
+            .infoProject {
+                font-size: .8rem;
+                width: 90%;
+                .details {
+                    margin: 2rem;
+                    width: 40%;
+                    .titlePorject {
+                        padding: .5rem;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .title{
+                font-size: 4rem;
+                left: 2%;
+            }
+            .frontEnd {
+                position: absolute;
+                top: 15%;
+                left: 12%;
+                h4{
+                    font-size: 2rem;
+                }
+        }
+    }
+    }
+    @media all and (min-width: 48rem) and (max-width: 60rem){
+        .mainProject {
+            .infoProject {
+                font-size: .8rem;
+                width: 90%;
+                .details {
+                    margin: 2rem;
+                    width: 40%;
+                    .titlePorject {
+                        padding: .5rem;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .title{
+                font-size: 4rem;
+                left: 2%;
+            }
+            .frontEnd {
+                position: absolute;
+                top: 15%;
+                left: 12%;
+                h4{
+                    font-size: 4rem;
+                }
+        }
+    }
+    }
 }

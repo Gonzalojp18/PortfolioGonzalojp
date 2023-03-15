@@ -14,7 +14,6 @@ tl.to('.letter', {
   y: 50,
   duration: 0.2,
   color: '#3d107380',
-  fontSize:'8rem',
   stagger: {
     from: 'start',
     each: 0.1,

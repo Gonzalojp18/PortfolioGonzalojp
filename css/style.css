@@ -433,16 +433,23 @@ body {
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .scrollDownRightProject {
-    left: 97%;
+    left: 22%;
     height: 70%;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .scrollDownRightProject {
-    left: 98.5%;
+    left: 24%;
     height: 70%;
   }
 }
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .scrollDownRightProject {
+    left: 23%;
+    height: 70%;
+  }
+}
+
 .access {
   margin-top: 1.5rem;
 }
@@ -458,6 +465,33 @@ body {
   background-color: #f3f3f3;
   color: #f90041;
 }
+@media all and (min-width: 20rem) and (max-width: 30rem) {
+  .access {
+    margin-top: 0.5rem;
+  }
+  .access a {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+@media all and (min-width: 30rem) and (max-width: 48rem) {
+  .access {
+    margin-top: 1.5rem;
+  }
+  .access a {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .access {
+    margin-top: 1.5rem;
+  }
+  .access a {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
 
 .sectionMain {
   margin: auto;
@@ -468,7 +502,7 @@ body {
 .sectionMain .bitMe {
   margin: 0;
   width: 70%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #f2f7f7;
   font-weight: 200;
   height: 10%;
@@ -494,13 +528,13 @@ body {
   display: flex;
   font-size: 7.5rem;
   font-weight: bold;
-  color: rgba(61, 16, 115, 0.2);
+  color: #dfc22c;
   position: relative;
   top: 5%;
   width: 60%;
 }
 .sectionMain .whoIam .description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   width: 50%;
   text-align: justify;
   padding: 0 1rem 0 1rem;
@@ -510,14 +544,14 @@ body {
     margin: 0;
   }
   .sectionMain .bitMe {
-    width: 90%;
-    font-size: 1rem;
+    width: 100%;
+    font-size: 1.3rem;
   }
   .sectionMain .bitMe span {
     color: #e5edf1;
     padding: 0.2rem;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: 0.4rem;
   }
   .sectionMain .whoIam {
@@ -526,16 +560,16 @@ body {
   .sectionMain .whoIam .headingTwo {
     flex-direction: column;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    top: 5%;
-    left: 5%;
+    top: 1%;
+    left: 2%;
     box-orient: vertical;
   }
   .sectionMain .whoIam .description {
-    font-size: 0.6rem;
-    width: 90%;
-    margin: 0 0 0 0.5rem;
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 0;
     text-align: justify;
   }
 }
@@ -545,14 +579,14 @@ body {
   }
   .sectionMain .bitMe {
     width: 90%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     height: 5%;
   }
   .sectionMain .bitMe span {
     color: #e5edf1;
     padding: 0.2rem;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 0.4rem;
   }
   .sectionMain .whoIam {
@@ -561,18 +595,53 @@ body {
   .sectionMain .whoIam .headingTwo {
     flex-direction: column;
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    top: 5%;
-    left: 5%;
+    top: 2%;
+    left: 3%;
     box-orient: vertical;
   }
   .sectionMain .whoIam .description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     width: 80%;
     text-align: justify;
   }
 }
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .sectionMain {
+    margin: 0;
+  }
+  .sectionMain .bitMe {
+    width: 90%;
+    font-size: 1.8rem;
+    height: 5%;
+  }
+  .sectionMain .bitMe span {
+    color: #e5edf1;
+    padding: 0.2rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+  .sectionMain .whoIam {
+    width: 100%;
+  }
+  .sectionMain .whoIam .headingTwo {
+    flex-direction: column;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    top: 0;
+    left: 10%;
+    box-orient: vertical;
+  }
+  .sectionMain .whoIam .description {
+    font-size: 1.2rem;
+    width: 90%;
+    text-align: justify;
+  }
+}
+
 .main {
   overflow: hidden;
   height: 500vh;
@@ -626,22 +695,89 @@ body {
   font-family: Neuemontreal, sans-serif;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
-  .main .mainProject .descriptionProject .infoProject {
+  .main .mainProject .infoProject {
     font-size: 0.8rem;
-    width: 90%;
-    top: 2%;
+    width: 100%;
+    top: 1%;
+    left: 2%;
   }
-  .main .mainProject .descriptionProject .title {
+  .main .mainProject .infoProject .details {
+    margin: 2rem;
+    width: 40%;
+  }
+  .main .mainProject .infoProject .details .titlePorject {
+    padding: 0.5rem;
+  }
+  .main .mainProject .infoProject .details img {
+    width: 100%;
+  }
+  .main .mainProject .title {
     font-size: 4rem;
     left: 2%;
   }
-  .main .mainProject .descriptionProject .frontEnd {
+  .main .mainProject .frontEnd {
     position: absolute;
-    top: 12%;
+    top: 15%;
     left: 12%;
   }
-  .main .mainProject .descriptionProject .frontEnd h4 {
+  .main .mainProject .frontEnd h4 {
     font-size: 2rem;
+  }
+}
+@media all and (min-width: 30rem) and (max-width: 48rem) {
+  .main .mainProject .infoProject {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .main .mainProject .infoProject .details {
+    margin: 2rem;
+    width: 40%;
+  }
+  .main .mainProject .infoProject .details .titlePorject {
+    padding: 0.5rem;
+  }
+  .main .mainProject .infoProject .details img {
+    width: 100%;
+  }
+  .main .mainProject .title {
+    font-size: 4rem;
+    left: 2%;
+  }
+  .main .mainProject .frontEnd {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+  }
+  .main .mainProject .frontEnd h4 {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .main .mainProject .infoProject {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .main .mainProject .infoProject .details {
+    margin: 2rem;
+    width: 40%;
+  }
+  .main .mainProject .infoProject .details .titlePorject {
+    padding: 0.5rem;
+  }
+  .main .mainProject .infoProject .details img {
+    width: 100%;
+  }
+  .main .mainProject .title {
+    font-size: 4rem;
+    left: 2%;
+  }
+  .main .mainProject .frontEnd {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+  }
+  .main .mainProject .frontEnd h4 {
+    font-size: 4rem;
   }
 }
 

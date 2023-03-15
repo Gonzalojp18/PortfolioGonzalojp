@@ -120,15 +120,18 @@
   left:23%;
   height: 50%;
   @media all and (min-width: 20rem) and (max-width: 30rem){
-    left:97%;
+    left:22%;
     height: 70%;
   }
   @media all and (min-width: 30rem) and (max-width: 48rem)
   {
-    left:98.5%;
+    left:24%;
     height: 70%;
   }
-  @media all and (min-width: 48rem) and (max-width: 60rem){}
+  @media all and (min-width: 48rem) and (max-width: 60rem){
+    left:23%;
+    height: 70%;
+  }
 }
 
 .access{
@@ -143,6 +146,27 @@
     &:hover{
       background-color: #f3f3f3;
       color: #f90041;
+    }
+  }
+  @media all and (min-width: 20rem) and (max-width: 30rem){
+    margin-top: .5rem;
+    a{
+      padding: .3rem;
+      font-size: .8rem;
+    }
+  }
+  @media all and (min-width: 30rem) and (max-width: 48rem){
+    margin-top: 1.5rem;
+    a{
+      padding: .5rem;
+      font-size: 1rem;
+    }
+  }
+  @media all and (min-width: 48rem) and (max-width: 60rem){
+    margin-top: 1.5rem;
+    a{
+      padding: .5rem;
+      font-size: 1rem;
     }
   }
 }
