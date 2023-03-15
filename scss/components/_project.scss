@@ -1,43 +1,55 @@
 
 .main{
     overflow: hidden;
-    height: 600vh;
+    height: 500vh;
     margin-top: 4rem;
     .mainProject{
-        width: 800vw;
+        width: 400vw;
         height: 100vh;
         background-color: #dfc22c;
-        .descriptionProject{
-            display: flex;
             .infoProject{
-                text-align: center;
-                font-size: 1.6rem;
-                width: 80%;
-                position: absolute;
-                left: 8%;
-                top: 3.8%;
+                width: 30%;
+                height: 60%;
+                position: relative;
+                left: 5%;
+                color:#f3f3f3;
+                display: flex;
+                .details{
+                    border-radius: 5%;
+                    margin: 4rem;
+                    width: 15%;
+                    text-align: center;
+                    background-color: rgb(35, 21, 60);
+                    position: relative;
+                    .titlePorject{
+                        padding: 1rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
             }
             .title{
                 position: relative;
                 padding-top: 0%;
-                left: 8%;
+                left: 12%;
                 font-size: 8rem;
                 font-weight: bold;
                 color: #f3f3f3;
             }
             .frontEnd {
                 position: absolute;
-                top: 12%;
-                left: 15%;
+                top: 15%;
+                left: 12%;
                 h4 {
-                    font-size: 6rem;
+                    font-size: 5rem;
                     font-weight: bold;
                     -webkit-text-stroke: 1px rgb(35, 21, 60);
                     color: transparent;
                     font-family: Neuemontreal, sans-serif;
                 }
             }
-        }
+
     }
     @media all and (min-width: 20rem) and (max-width: 30rem) {
         .mainProject{

@@ -400,13 +400,13 @@ body {
 }
 
 .scrollDownLeftProject {
-  position: absolute;
+  position: relative;
   writing-mode: vertical-rl;
   box-orient: vertical;
   direction: rtl;
   transform: rotate(180deg);
-  top: 80%;
-  left: 0;
+  top: 60%;
+  left: 0.5%;
   height: 50%;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
@@ -422,13 +422,13 @@ body {
   }
 }
 .scrollDownRightProject {
-  position: absolute;
+  position: relative;
   writing-mode: vertical-rl;
   box-orient: vertical;
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 100%;
+  left: 23%;
   height: 50%;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
@@ -443,6 +443,22 @@ body {
     height: 70%;
   }
 }
+.access {
+  margin-top: 1.5rem;
+}
+.access a {
+  text-decoration: none;
+  background-color: #f90041;
+  border-radius: 5%;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: #f3f3f3;
+}
+.access a:hover {
+  background-color: #f3f3f3;
+  color: #f90041;
+}
+
 .sectionMain {
   margin: auto;
   padding: 2rem 0 0 0;
@@ -510,7 +526,7 @@ body {
   .sectionMain .whoIam .headingTwo {
     flex-direction: column;
     margin: 0;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     top: 5%;
     left: 5%;
@@ -545,7 +561,7 @@ body {
   .sectionMain .whoIam .headingTwo {
     flex-direction: column;
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     top: 5%;
     left: 5%;
@@ -559,40 +575,51 @@ body {
 }
 .main {
   overflow: hidden;
-  height: 600vh;
+  height: 500vh;
   margin-top: 4rem;
 }
 .main .mainProject {
-  width: 800vw;
+  width: 400vw;
   height: 100vh;
   background-color: #dfc22c;
 }
-.main .mainProject .descriptionProject {
+.main .mainProject .infoProject {
+  width: 30%;
+  height: 60%;
+  position: relative;
+  left: 5%;
+  color: #f3f3f3;
   display: flex;
 }
-.main .mainProject .descriptionProject .infoProject {
+.main .mainProject .infoProject .details {
+  border-radius: 5%;
+  margin: 4rem;
+  width: 15%;
   text-align: center;
-  font-size: 1.6rem;
-  width: 80%;
-  position: absolute;
-  left: 8%;
-  top: 3.8%;
+  background-color: rgb(35, 21, 60);
+  position: relative;
 }
-.main .mainProject .descriptionProject .title {
+.main .mainProject .infoProject .details .titlePorject {
+  padding: 1rem;
+}
+.main .mainProject .infoProject .details img {
+  width: 100%;
+}
+.main .mainProject .title {
   position: relative;
   padding-top: 0%;
-  left: 8%;
+  left: 12%;
   font-size: 8rem;
   font-weight: bold;
   color: #f3f3f3;
 }
-.main .mainProject .descriptionProject .frontEnd {
+.main .mainProject .frontEnd {
   position: absolute;
-  top: 12%;
-  left: 15%;
+  top: 15%;
+  left: 12%;
 }
-.main .mainProject .descriptionProject .frontEnd h4 {
-  font-size: 6rem;
+.main .mainProject .frontEnd h4 {
+  font-size: 5rem;
   font-weight: bold;
   -webkit-text-stroke: 1px rgb(35, 21, 60);
   color: transparent;

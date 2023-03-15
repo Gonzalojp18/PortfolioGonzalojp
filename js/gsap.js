@@ -28,7 +28,6 @@ let tlp = gsap.timeline({
     trigger: '.main',
     start: "top",
     pin: true,
-    markers: true,
     scrub: 4,
     repeat: 2, // number of repeats (-1 for infinite)
     repeatDelay: -1, // seconds between repeats
@@ -51,26 +50,15 @@ tlp.to('.frontEnd',{
 // SCROLL EACH PROJECT
 
 tlp.to('.details',{
-  y: -1000, //each project gonna cross all the screen
+  x: -1200, //each project gonna cross all the screen
   ease: "slow(0.7, 0.7, false)",
   duration: 0.2,
   end: '+-800',
   stagger: {
     from: 'start',
-    each: 0.2,
-    amount: .6,
+    each: 1,
+    amount: .1,
   }
-})
-
-
-
-tlp.to('.encrypt',{
-  x: -2000, //each project gonna cross all the screen
-  ease: 'power2.out',
-  duration: 0.2,
-  repeat: 2, // number of repeats (-1 for infinite)
-  repeatDelay: -1, // seconds between repeats
-  repeatRefresh: true
 })
 
 
