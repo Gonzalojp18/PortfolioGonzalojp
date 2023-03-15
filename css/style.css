@@ -114,7 +114,7 @@ body {
   .header .homeName {
     width: 80%;
     visibility: visible;
-    padding: 85% 0 0 2%;
+    padding: 90% 0 0 2%;
   }
   .header .homeName .name .hi {
     font-size: 1rem;
@@ -146,7 +146,7 @@ body {
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .header .homeName {
     width: 80%;
-    padding: 95% 0 0 2%;
+    padding: 96% 0 0 2%;
   }
   .header .homeName .name .hi {
     font-size: 1.5rem;
@@ -233,14 +233,14 @@ body {
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .menu {
-    left: 89%;
-    top: 0;
+    left: 87%;
+    top: 1%;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .menu {
-    left: 92%;
-    top: 0;
+    left: 90%;
+    top: 1%;
   }
 }
 @media all and (min-width: 48rem) and (max-width: 60rem) {
@@ -364,9 +364,9 @@ body {
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 0.2%;
+  left: 0%;
 }
-@media all and (min-width: 20rem) and (max-width: 30rem) {
+@media all and (min-width: 20rem) and (max-width: 29rem) {
   .scrollDownleft {
     display: none;
   }
@@ -376,6 +376,12 @@ body {
     left: 0;
   }
 }
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .scrollDownleft {
+    left: 0;
+  }
+}
+
 .scrollDownright {
   position: absolute;
   writing-mode: vertical-rl;
@@ -383,16 +389,16 @@ body {
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 98.5%;
+  left: 97%;
 }
-@media all and (min-width: 20rem) and (max-width: 30rem) {
+@media all and (min-width: 20rem) and (max-width: 29rem) {
   .scrollDownright {
     display: none;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .scrollDownright {
-    left: 98.5%;
+    left: 97%;
   }
 }
 .description * {
@@ -428,7 +434,7 @@ body {
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 23%;
+  left: 23.5%;
   height: 50%;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
@@ -439,7 +445,7 @@ body {
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .scrollDownRightProject {
-    left: 24%;
+    left: 23%;
     height: 70%;
   }
 }
@@ -528,9 +534,9 @@ body {
   display: flex;
   font-size: 7.5rem;
   font-weight: bold;
-  color: #dfc22c;
+  color: rgba(223, 194, 44, 0.9);
   position: relative;
-  top: 5%;
+  top: 2%;
   width: 60%;
 }
 .sectionMain .whoIam .description {
@@ -564,6 +570,7 @@ body {
     font-weight: bold;
     top: 1%;
     left: 2%;
+    width: 20%;
     box-orient: vertical;
   }
   .sectionMain .whoIam .description {

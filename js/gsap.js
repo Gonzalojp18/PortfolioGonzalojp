@@ -5,14 +5,14 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.headingTwo',
     start: "top center",
-    delay: -1,
     ease: "power1.inOut",
+    scrub: 1
   }
 })
 
 tl.to('.letter', {
-  y: 50,
-  duration: 0.2,
+  y: 80,
+  duration: 0.1,
   color: '#3d107380',
   stagger: {
     from: 'start',
