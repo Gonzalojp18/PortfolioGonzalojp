@@ -1,3 +1,8 @@
+// pin of project
+.stickProject{
+  position: sticky;
+}
+
 
 .active {
     clip-path: circle(115% at 16% 120%);
@@ -117,7 +122,7 @@
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left:23.5%;
+  left:19%;
   height: 50%;
   @media all and (min-width: 20rem) and (max-width: 30rem){
     left:22%;
@@ -125,7 +130,7 @@
   }
   @media all and (min-width: 30rem) and (max-width: 48rem)
   {
-    left:23%;
+    left:18%;
     height: 70%;
   }
   @media all and (min-width: 48rem) and (max-width: 60rem){

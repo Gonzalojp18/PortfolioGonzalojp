@@ -1,7 +1,6 @@
 .header {
     width: 97%;
     height: 100vh;
-
     .homeName {
         text-align: left;
         width: 70%;
@@ -132,14 +131,14 @@
     @media all and (min-width: 48rem) and (max-width: 60rem){
         .homeName {
             width: 80%;
-            padding: 85% 0 0 2%;
+            padding: 60% 0 0 2%;
             .name {
                 .hi {
-                    font-size: 2rem;
+                    font-size: 3rem;
                     font-weight: 600;
                 }
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 3.5rem;
                     font-weight: 700;
                 }
                 .quote {
@@ -149,7 +148,7 @@
                 }
                 .intro {
                     width: 70%;
-                    font-size: .9rem;
+                    font-size: 1.2rem;
                     margin: 0 0 1rem 0;
                 }
                 .btn {

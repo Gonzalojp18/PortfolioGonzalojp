@@ -25,7 +25,7 @@ tl.to('.letter', {
 let tlp = gsap.timeline({
   scrollTrigger: {
     trigger: '.main',
-    start: "top",
+    start: "top top",
     pin: true,
     scrub: 4,
     repeat: 2, // number of repeats (-1 for infinite)
@@ -35,24 +35,24 @@ let tlp = gsap.timeline({
 })
 
 tlp.to('.title',{
-  x: -1500, //each project gonna cross all the screen
+  x: -600, //each project gonna cross all the screen
   ease: 'power2.out',
-  duration: 0.2
+  duration: 0.2,
+  delay: 1
 })
 
 tlp.to('.frontEnd',{
-  x: 1500, //each project gonna cross all the screen
+  x: 600, //each project gonna cross all the screen
   ease: 'power2.out',
-  duration: 0.2
+  duration: 0.2,
 })
 
 // SCROLL EACH PROJECT
 
 tlp.to('.details',{
-  x: -1200, //each project gonna cross all the screen
+  x: -1500, //each project gonna cross all the screen
   ease: "slow(0.7, 0.7, false)",
   duration: 0.2,
-  end: '+-800',
   stagger: {
     from: 'start',
     each: 1,
