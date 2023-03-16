@@ -719,10 +719,10 @@ body {
     width: 40%;
   }
   .main .mainProject .infoProject .details .titlePorject {
-    padding: 0.5rem;
+    padding: 0.2rem;
   }
   .main .mainProject .infoProject .details img {
-    width: 100%;
+    width: 80%;
   }
   .main .mainProject .title {
     font-size: 4rem;
@@ -844,6 +844,101 @@ body {
   color: #23153c;
   width: 80%;
   margin: 0.5rem auto 0 auto;
+}
+@media all and (min-width: 20rem) and (max-width: 30rem) {
+  .boxSkill {
+    height: 40%;
+  }
+  .boxSkill .titleSkill .tech {
+    font-size: 3rem;
+    bottom: 100%;
+  }
+  .boxSkill .titleSkill .tools {
+    right: 99%;
+    font-size: 2.5rem;
+  }
+  .boxSkill .skill {
+    width: 24%;
+    height: 20%;
+    margin: 1rem 0.5rem 0 1rem;
+  }
+  .boxSkill .skill .textSkil {
+    text-align: center;
+    font-size: 0.6rem;
+    width: 90%;
+  }
+}
+@media all and (min-width: 30rem) and (max-width: 48rem) {
+  .boxSkill {
+    height: 40%;
+  }
+  .boxSkill .titleSkill .tech {
+    font-size: 3.5rem;
+    bottom: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .boxSkill .titleSkill .tools {
+    right: 99%;
+    font-size: 3rem;
+  }
+  .boxSkill .skill {
+    width: 40%;
+    height: 15%;
+    margin: 0 0.2rem 0 1rem;
+  }
+  .boxSkill .skill .textSkil {
+    text-align: center;
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .boxSkill {
+    height: 35%;
+  }
+  .boxSkill .titleSkill .tech {
+    font-size: 4rem;
+    bottom: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .boxSkill .titleSkill .tools {
+    right: 99%;
+    font-size: 4rem;
+  }
+  .boxSkill .skill {
+    width: 35%;
+    height: 10%;
+    margin: 0 0.2rem 0 0.2rem;
+  }
+  .boxSkill .skill .textSkil {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}
+@media all and (min-width: 60rem) and (max-width: 70rem) {
+  .boxSkill {
+    height: 35%;
+  }
+  .boxSkill .titleSkill .tech {
+    font-size: 4rem;
+    bottom: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .boxSkill .titleSkill .tools {
+    right: 99%;
+    font-size: 4rem;
+  }
+  .boxSkill .skill {
+    width: 35%;
+    height: 10%;
+    margin: 0 0.2rem 0 0.2rem;
+  }
+  .boxSkill .skill .textSkil {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

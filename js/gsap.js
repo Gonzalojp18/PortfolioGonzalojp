@@ -61,4 +61,15 @@ tlp.to('.details',{
 })
 
 
+let mm = gsap.matchMedia();
+    mm.add("(min-width: 768px) and (max-width: 960px)", () => {
+// set up the alternating up and down movement
+
+tlp.to('.details', {
+  x: -3000, // move horizontally by 100 pixels
+  });
+
+})
+
+
 
