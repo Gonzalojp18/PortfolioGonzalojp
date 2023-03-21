@@ -146,14 +146,14 @@ body {
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .header .homeName {
     width: 80%;
-    padding: 96% 0 0 2%;
+    padding: 90% 0 0 2%;
   }
   .header .homeName .name .hi {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
   }
   .header .homeName .name h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .header .homeName .name .quote {
     font-size: 1.5rem;
@@ -161,7 +161,7 @@ body {
   }
   .header .homeName .name .intro {
     width: 80%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0 0 0.5rem 0;
   }
   .header .homeName .name .btn {
@@ -393,7 +393,7 @@ body {
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 97%;
+  left: 98.5%;
 }
 @media all and (min-width: 20rem) and (max-width: 29rem) {
   .scrollDownright {
@@ -416,7 +416,7 @@ body {
   direction: rtl;
   transform: rotate(180deg);
   top: 60%;
-  left: 0.5%;
+  left: 0.3%;
   height: 50%;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
@@ -477,11 +477,11 @@ body {
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .access {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
   }
   .access a {
-    padding: 0.3rem;
-    font-size: 0.8rem;
+    padding: 0.2rem;
+    font-size: 0.7rem;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
@@ -607,9 +607,9 @@ body {
   .sectionMain .whoIam .headingTwo {
     flex-direction: column;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bold;
-    top: 2%;
+    top: 1%;
     left: 3%;
     box-orient: vertical;
   }
@@ -657,7 +657,7 @@ body {
 
 .main {
   overflow: hidden;
-  height: 400vh;
+  height: 330vh;
   margin-top: 4rem;
 }
 .main .mainProject {
@@ -667,7 +667,7 @@ body {
 }
 .main .mainProject .infoProject {
   width: 30%;
-  height: 60%;
+  height: 50%;
   position: relative;
   left: 7%;
   color: #f3f3f3;
@@ -678,7 +678,6 @@ body {
   margin: 2rem;
   width: 15%;
   text-align: center;
-  background-color: rgb(35, 21, 60);
   position: relative;
 }
 .main .mainProject .infoProject .details .titlePorject {
@@ -690,15 +689,15 @@ body {
 .main .mainProject .title {
   position: relative;
   padding-top: 0%;
-  left: 10%;
+  left: 13%;
   font-size: 8rem;
   font-weight: bold;
   color: #f3f3f3;
 }
 .main .mainProject .frontEnd {
   position: absolute;
-  top: 19.5%;
-  left: 12%;
+  top: 75%;
+  left: 2%;
 }
 .main .mainProject .frontEnd h4 {
   font-size: 5rem;
@@ -716,13 +715,14 @@ body {
   }
   .main .mainProject .infoProject .details {
     margin: 2rem;
-    width: 40%;
+    width: 50%;
+    height: 100%;
   }
   .main .mainProject .infoProject .details .titlePorject {
     padding: 0.2rem;
   }
   .main .mainProject .infoProject .details img {
-    width: 80%;
+    width: 100%;
   }
   .main .mainProject .title {
     font-size: 4rem;
@@ -734,7 +734,7 @@ body {
     left: 12%;
   }
   .main .mainProject .frontEnd h4 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media all and (min-width: 31rem) and (max-width: 48rem) {
@@ -809,10 +809,10 @@ body {
   font-weight: bold;
 }
 .boxSkill .titleSkill .tech {
-  font-size: 5rem;
+  font-size: 6rem;
   margin-bottom: 0.3rem;
   position: absolute;
-  bottom: 100%;
+  bottom: 95%;
 }
 .boxSkill .titleSkill .tools {
   writing-mode: vertical-rl;
@@ -821,7 +821,8 @@ body {
   transform: rotate(180deg);
   position: absolute;
   right: 98.6%;
-  font-size: 4rem;
+  font-size: 5.5rem;
+  font-weight: 500;
   -webkit-text-stroke: 1px #dfc22c;
   color: transparent;
 }
@@ -847,7 +848,7 @@ body {
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .boxSkill {
-    height: 40%;
+    height: 60%;
   }
   .boxSkill .titleSkill .tech {
     font-size: 3rem;
@@ -858,7 +859,7 @@ body {
     font-size: 2.5rem;
   }
   .boxSkill .skill {
-    width: 24%;
+    width: 28%;
     height: 20%;
     margin: 1rem 0.5rem 0 1rem;
   }
@@ -873,13 +874,13 @@ body {
     height: 40%;
   }
   .boxSkill .titleSkill .tech {
-    font-size: 3.5rem;
+    font-size: 4rem;
     bottom: 100%;
     margin-bottom: 0.5rem;
   }
   .boxSkill .titleSkill .tools {
     right: 99%;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .boxSkill .skill {
     width: 40%;
@@ -938,6 +939,85 @@ body {
     text-align: center;
     font-size: 0.8rem;
     width: 90%;
+  }
+}
+
+#contactMe {
+  background-color: #dfc22c;
+  margin: 0 auto 0 30%;
+  width: 60%;
+  height: 80vh;
+  border: 0.5em solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contactMe .boxContact {
+  position: relative;
+  bottom: 23%;
+  color: #f3f3f3;
+}
+#contactMe .boxContact .contactHeading {
+  font-size: 5rem;
+  font-weight: bold;
+}
+#contactMe .boxForm {
+  position: relative;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+}
+#contactMe .boxForm .contactParragraph {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+#contactMe .boxForm .form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#contactMe .boxForm .form .name {
+  display: flex;
+}
+#contactMe .boxForm .form .name .lname {
+  margin-left: 1rem;
+}
+#contactMe .boxForm .form .textarea {
+  height: 15vh;
+}
+@media all and (min-width: 20rem) and (max-width: 30rem) {
+  #contactMe {
+    background-color: #dfc22c;
+    margin: 5% auto 0 20%;
+  }
+  #contactMe .boxContact {
+    bottom: 10%;
+    color: red;
+  }
+  #contactMe .boxContact .contactHeading {
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+  #contactMe .boxContact .boxForm {
+    bottom: 2%;
+  }
+}
+@media all and (min-width: 30rem) and (max-width: 48rem) {
+  #contactMe {
+    background-color: blue;
+    margin: 10% auto 0 20%;
+  }
+  #contactMe .boxContact {
+    background-color: blue;
+    bottom: 10%;
+    color: red;
+  }
+  #contactMe .boxContact .contactHeading {
+    font-size: 3rem;
+  }
+  #contactMe .boxContact .boxForm {
+    bottom: 2%;
   }
 }
 

@@ -11,10 +11,10 @@
         color: #dfc22c;
         font-weight: bold;
         .tech{
-            font-size: 5rem;
+            font-size: 6rem;
             margin-bottom: .3rem;
             position: absolute;
-            bottom: 100%;
+            bottom: 95%;
         }
         .tools{
             writing-mode: vertical-rl;
@@ -23,7 +23,8 @@
             transform: rotate(180deg);
             position: absolute;
             right: 98.6%;
-            font-size: 4rem;
+            font-size:5.5rem;
+            font-weight: 500;
             -webkit-text-stroke: 1px #dfc22c;
             color: transparent;
         }
@@ -49,7 +50,7 @@
         }
     }
     @media all and (min-width: 20rem) and (max-width: 30rem) {
-        height: 40%;
+        height: 60%;
         .titleSkill {
             .tech{
                 font-size: 3rem;
@@ -61,7 +62,7 @@
             }
         }
         .skill {
-            width: 24%;
+            width: 28%;
             height: 20%;
             margin: 1rem .5rem 0 1rem;
             .textSkil {
@@ -75,13 +76,13 @@
         height: 40%;
         .titleSkill {
             .tech{
-                font-size: 3.5rem;
+                font-size: 4rem;
                 bottom: 100%;
                 margin-bottom: .5rem;
             }
             .tools{
                 right: 99%;
-                font-size: 3rem;
+                font-size: 4rem;
             }
         }
         .skill {

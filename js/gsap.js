@@ -24,7 +24,7 @@ tl.to('.letter', {
 
 let tlp = gsap.timeline({
   scrollTrigger: {
-    trigger: '.main',
+    trigger: '.mainProject',
     start: "top top",
     pin: true,
     scrub: 4,
@@ -35,41 +35,54 @@ let tlp = gsap.timeline({
 })
 
 tlp.to('.title',{
-  x: -600, //each project gonna cross all the screen
+  x: -800, //each project gonna cross all the screen
   ease: 'power2.out',
-  duration: 0.2,
+  duration: 0.4,
   delay: 1
 })
 
 tlp.to('.frontEnd',{
-  x: 600, //each project gonna cross all the screen
+  x: 700, //each project gonna cross all the screen
   ease: 'power2.out',
   duration: 0.2,
+  delay: -1
 })
 
 // SCROLL EACH PROJECT
 
 tlp.to('.details',{
   x: -1500, //each project gonna cross all the screen
-  ease: "slow(0.7, 0.7, false)",
-  duration: 0.2,
   stagger: {
-    from: 'start',
     each: 1,
-    amount: .1,
+    amount: .6,
+    duration: 10,
+    ease: "slow(0.9, 0.9, false)",
   }
 })
 
 
 let mm = gsap.matchMedia();
-    mm.add("(min-width: 768px) and (max-width: 960px)", () => {
+    mm.add("(min-width: 480px) and (max-width: 768px)", () => {
 // set up the alternating up and down movement
 
 tlp.to('.details', {
-  x: -3000, // move horizontally by 100 pixels
+  x: -2000, // move horizontally by 100 pixels
   });
 
 })
+
+// ScrollTrigger on section skill
+
+tlp.to(".skill", {
+  y: 50,
+  scrub: 2,
+  duration: .3,
+  stagger: { // wrap advanced options in an object
+    each: 4,
+    amount: .3,
+    from: 'start'
+  }
+});
 
 
 

@@ -80,7 +80,7 @@
   direction: rtl;
   transform: rotate(180deg);
   top: 80%;
-  left: 97%;
+  left: 98.5%;
   @media all and (min-width: 20rem) and (max-width: 29rem){display: none;}
   @media all and (min-width: 30rem) and (max-width: 48rem)
   { left:97%;}
@@ -100,7 +100,7 @@
     direction: rtl;
     transform: rotate(180deg);
     top: 60%;
-    left:.5%;
+    left:.3%;
     height: 50%;
     @media all and (min-width: 20rem) and (max-width: 30rem){
       left:0;
@@ -154,10 +154,10 @@
     }
   }
   @media all and (min-width: 20rem) and (max-width: 30rem){
-    margin-top: .5rem;
+    margin-top: .3rem;
     a{
-      padding: .3rem;
-      font-size: .8rem;
+      padding: .2rem;
+      font-size: .7rem;
     }
   }
   @media all and (min-width: 30rem) and (max-width: 48rem){

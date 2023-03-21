@@ -35,7 +35,7 @@
                             href="./index.html">INICIO</a></li>
                     <li class="navLink aboutMe"><a href="#aboutMe">SOBRE MI</a></li>
                     <li class="navLink project"><a href="#project">PROYECTOS</a></li>
-                    <li class="navLink tools"><a href="./pages/aboutMe.html/#projectDetails">TECNOLOGIAS</a></li>
+                    <li class="navLink tools"><a href="#skill">TECNOLOGIAS</a></li>
                     <li class="navLink contact"><a href="#contactMe">CONTACTAME</a></li>
                 </ul>
             </nav>
@@ -85,9 +85,10 @@
                                 <circle r="2" fill="#24153e" transform="matrix(0 -1 -1 0 16 14)" />
                             </g>
                         </svg></a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
-                        <path fill="#24153e" d="M30 30h-8V4h8zm-6-2h4V6h-4zm-4 2h-8V12h8zm-6-2h4V14h-4zm-4 2H2V18h8z" />
-                    </svg></li>
+                <li><a href="#skill"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
+                            <path fill="#24153e"
+                                d="M30 30h-8V4h8zm-6-2h4V6h-4zm-4 2h-8V12h8zm-6-2h4V14h-4zm-4 2H2V18h8z" />
+                        </svg></a></li>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024">
                         <path fill="#24153e"
                             d="M128 224v512a64 64 0 0 0 64 64h640a64 64 0 0 0 64-64V224H128zm0-64h768a64 64 0 0 1 64 64v512a128 128 0 0 1-128 128H192A128 128 0 0 1 64 736V224a64 64 0 0 1 64-64z" />
@@ -161,16 +162,6 @@
                         <a href="https://github.com/Gonzalojp18/PremiosPAM" target="_blank">Repositorio</a>
                     </div>
                 </div>
-                <!-- DESCRIPCIONES DE SKILL O PROJECT POR DEFINIR  -->
-                <!-- <p class="details">Me gusta trabajar con flexbox lo cual me facilita crear sitios Web Responsivos.
-                    </p>
-                    <p class="details">Usar herramienta como SASS lo que me ayuda a desarrolar y mantener un codigo
-                        mucho mas ordenado, separado por componentes</p>
-                    <p class="details">Me adapto con facilidad a frameworks de css como Bootstrap, tailwinds</p>
-                    <p class="details">He estado adentrandome un poco en librerias de Js que me permitan hacer
-                        animationes con mejores rendimientos mi favorita es GSAP</p>
-                    <p class="details">Y en el presente inmediato aprendo framewoks y librerias de JS como react lo cual
-                        me impulsaria a mejorar las experiencias de usuarios y a crear mejor componentes UI</p> -->
             </div>
             <div class="frontEnd">
                 <h4>FRONT END</h4>
@@ -184,7 +175,7 @@
                             class="fa-solid fa-angles-up fa-beat-fade" value="scroll"></i></i></span>
             </div>
         </section>
-        <section class=boxSkill id="skill" id="projectDetails">
+        <section class=boxSkill id="skill">
             <div class="titleSkill">
                 <h2 class="tech">Tecnologias</h2>
                 <p class="tools">Herramientas&</p>
@@ -236,6 +227,43 @@
             </div>
         </section>
     </main>
+    <section id="contactMe">
+        <div class="boxContact">
+            <h5 class="contactHeading">CONTACTAME</h5>
+        </div>
+        <div class="boxForm">
+            <p class=contactParragraph>"Alone we can do so little together we can do so much" - Hellen Keller
+            </p>
+            <div class="input-group input-group-sm mb-3 form">
+                <div class="name">
+                    <div class="row mb-3" data-aos="fade-up" data-aos-duration="3000">
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control" id="floatingInput" required=""
+                            name="nombre">
+                    </div>
+                    <div class="row mb-3 lname" data-aos="fade-up" data-aos-duration="3000">
+                        <label for="">Apellido</label>
+                        <input type="text" class="form-control"  id="floatingInput" required=""
+                            name="nombre">
+                    </div>
+                </div>
+                <div class="row mb-3 w-60" data-aos="fade-up" data-aos-duration="2500">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" id="floatingInput" required=""
+                        name="email">
+                </div>
+                <div class="row mb-3 w-60" data-aos="fade-up" data-aos-duration="2000">
+                    <label for="">Mensaje</label>
+                    <input type="textarea" class="form-control textarea" id="floatingInput"
+                        required="" name="message">
+                </div>
+            </div>
+            <button class="btn btn-outline-secondary" type="button">Enviar</button>
+        </div>
+    </section>
+    <footer>
+        <h5>please finish but now</h5>
+    </footer>
     <span class="scrollDownright" href="#aboutMe" style="font-size: 10px; color: #f90041;"><i
             class=" scroll fa-solid fa-angles-up fa-beat-fade mt-50" value="scroll">Scroll Down<i
                 class="fa-solid fa-angles-up fa-beat-fade" value="scroll"></i></i></span>
