@@ -1,0 +1,21 @@
+.boxFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    margin-top: 4rem;
+    h2{
+        color:#f3f3f3;
+        font-weight: 200;
+        font-size: 2rem;
+    }
+    .socialMedia{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3rem;
+        width: 30%;
+        li{
+            list-style: none;
+        }
+    }
+}
