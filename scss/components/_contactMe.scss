@@ -8,8 +8,6 @@
     flex-direction: column;
     align-items: center;
     .boxContact{
-        position: relative;
-        bottom: 23%;
         color: #f3f3f3;
         .contactHeading{
             font-size: 5rem;
@@ -25,6 +23,7 @@
                 margin-bottom: 2rem;
                 font-size: 1rem;
                 text-align: center;
+                color:rgba(35, 21, 60, .5);
             }
             .form{
                 display: flex;
@@ -43,31 +42,165 @@
         }
         @media all and (min-width: 20rem) and (max-width: 30rem) {
                 background-color: #dfc22c;
-                margin:  5% auto 0 20%;
+                margin:  1rem auto 0 auto;
+                height: 80vh;
+                width: 80%;
             .boxContact{
                 bottom: 10%;
                 .contactHeading{
                     font-size: 2rem;
-                    margin-top: 4rem;
+                    margin-top: 1rem;
                 }
                 .boxForm {
                     bottom: 2%;
                 }
             }
+            .boxForm {
+                position: relative;
+                bottom: 10%;
+                display: flex;
+                flex-direction: column;
+                .contactParragraph {
+                    margin-top: 1rem;
+                    font-size: .4rem;
+                    text-align: center;
+                    color:rgba(35, 21, 60, .5);
+                }
+                .form{
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+                    .name {
+                        display: flex;
+                        .lname{
+                            margin-left: 1rem;
+                        }
+                    }
+                    .textarea{
+                        height: 15vh;
+                    }
+                }
+            }
         }
         @media all and (min-width: 30rem) and (max-width: 48rem) {
-            margin:  10% auto 0 20%;
+            margin:  1rem auto 0 auto;
+            height: 60vh;
+            width: 80%;
         .boxContact{
             bottom: 10%;
             .contactHeading{
-                font-size: 3rem;
+                font-size: 2rem;
             }
             .boxForm {
                 bottom: 2%;
             }
         }
+        .boxForm {
+            position: relative;
+            bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            .contactParragraph {
+                margin-top: 1.5rem;
+                font-size: .6rem;
+                text-align: center;
+                color:rgba(35, 21, 60, .5);
+            }
+            .form{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                .name {
+                    display: flex;
+                    .lname{
+                        margin-left: 1rem;
+                    }
+                }
+                .textarea{
+                    height: 15vh;
+                }
+            }
         }
-        @media all and (min-width: 48rem) and (max-width: 60rem){}
-        @media all and (min-width: 60rem) and (max-width: 70rem){}
+        }
+        @media all and (min-width: 48rem) and (max-width: 60rem){
+            margin:  0 auto 0 auto;
+            height: 60vh;
+            width: 80%;
+        .boxContact{
+            bottom: 10%;
+            .contactHeading{
+                font-size: 2rem;
+            }
+            .boxForm {
+                bottom: 2%;
+            }
+        }
+        .boxForm {
+            position: relative;
+            bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            .contactParragraph {
+                margin-top: 2rem;
+                font-size: .8rem;
+                text-align: center;
+                color:rgba(35, 21, 60, .6);
+            }
+            .form{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                .name {
+                    display: flex;
+                    .lname{
+                        margin-left: 1rem;
+                    }
+                }
+                .textarea{
+                    height: 15vh;
+                }
+            }
+        }
+        }
+        @media all and (min-width: 60rem) and (max-width: 70rem){
+            margin:  0 auto 0 auto;
+            height: 60vh;
+            width: 80%;
+        .boxContact{
+            bottom: 10%;
+            .contactHeading{
+                font-size: 2rem;
+            }
+            .boxForm {
+                bottom: 2%;
+            }
+        }
+        .boxForm {
+            position: relative;
+            bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            .contactParragraph {
+                margin-top: 2rem;
+                font-size: .8rem;
+                text-align: center;
+                color:rgba(35, 21, 60, .6);
+            }
+            .form{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                .name {
+                    display: flex;
+                    .lname{
+                        margin-left: 1rem;
+                    }
+                }
+                .textarea{
+                    height: 15vh;
+                }
+            }
+        }
+        }
 
 }
