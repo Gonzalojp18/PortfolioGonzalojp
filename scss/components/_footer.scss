@@ -9,10 +9,17 @@
         font-weight: 200;
         font-size: 2rem;
     }
+    p{
+        width: 40%;
+        text-align: center;
+        color:#f3f3f3;
+        font-size: .8rem;
+        margin-top: .5rem;
+    }
     .socialMedia{
         display: flex;
         justify-content: space-around;
-        margin-top: 3rem;
+        margin-top: 2rem;
         width: 30%;
         li{
             list-style: none;
@@ -20,14 +27,18 @@
     }
     @media all and (min-width: 20rem) and (max-width: 30rem){
         height: 30vh;
-        margin-top: 5rem;
+        margin-top: 2.5rem;
         h2{
-            font-size: 1.5rem;
+            font-size: 1rem;
+        }
+        p{
+            width: 80%;
+            font-size: .6rem;
         }
         .socialMedia{
             display: flex;
             justify-content: space-around;
-            margin-top: 3rem;
+            margin-top: .5rem;
             width: 80%;
             li{
                 list-style: none;

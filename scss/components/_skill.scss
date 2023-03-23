@@ -1,13 +1,14 @@
 .boxSkill{
     position: relative;
-    left: 15%;
-    top: 4.5%;
+    left: 10%;
+    top: 4%;
     height: 40%;
     .containerSkill{
         display: grid;
         grid-template-columns: 20% 20% 20% 20%;
-        grid-template-rows: 80% 80%;
-        gap: 1em;
+        grid-template-rows: 60% 60%;
+        gap: .5em;
+        margin-left: 5%;
     }
     .titleSkill {
         color: #dfc22c;
@@ -51,41 +52,41 @@
     }
     @media all and (min-width: 20rem) and (max-width: 30rem){
         height: 100%;
-        left: 13%;
+        left: 10%;
         top: 3%;
         .containerSkill{
-            grid-template-columns: 60% 60%;
-            grid-template-rows: 40% 40% 40% 40%;
-            gap: .2em;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 20% 20% 20% 20%;
+            gap: .5em;
         }
         .titleSkill {
             .tech{
-                font-size: 3rem;
-                bottom: 100%;
+                font-size: 2rem;
+                bottom: 98%;
             }
             .tools{
-                right: 99%;
-                font-size: 2.5rem;
+                right: 98%;
+                font-size: 2rem;
             }
         }
         .skill {
-            width: 60%;
-            height: 60%;
+            width: 100%;
+            height: 100%;
             .textSkil {
                 text-align: center;
-                font-size: 0.6rem;
-                width: 80%;
+                font-size: 0.4rem;
+                width: 100%;
             }
     }
 }
     @media all and (min-width: 30rem) and (max-width: 48rem){
         height: 100%;
-        left: 11%;
+        left: 8%;
         top: 3%;
         .containerSkill{
-            grid-template-columns: 60% 60%;
-            grid-template-rows: 40% 40% 40% 40%;
-            gap: .2em;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 30% 30% 30% 30%;
+            gap: .4em;
         }
         .titleSkill {
             .tech{
@@ -98,8 +99,8 @@
             }
         }
         .skill {
-            width: 60%;
-            height: 60%;
+            width: 80%;
+            height: 100%;
             .textSkil {
                 text-align: center;
                 font-size: 0.6rem;
@@ -112,9 +113,9 @@
         left: 13%;
         top: 3%;
         .containerSkill{
-            grid-template-columns: 60% 60%;
-            grid-template-rows: 40% 40% 40% 40%;
-            gap: .2em;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 30% 30% 30% 30%;
+            gap: .4em;
         }
         .titleSkill {
             .tech{

@@ -2,82 +2,98 @@
     background-color: #dfc22c;
     margin:  0 auto 0 30%;
     width:60%;
-    height: 80vh;
+    height: 85vh;
     border: .5em solid #f3f3f3;
     display: flex;
     flex-direction: column;
     align-items: center;
     .boxContact{
-        color: #f3f3f3;
         .contactHeading{
+            color: #f3f3f3;
             font-size: 5rem;
             font-weight: 700;
+            text-align: center;
+        }
+        .contactParragraph {
+            font-size: 1rem;
+            text-align: center;
+            color:rgba(35, 21, 60, .8);
         }
     }
         .boxForm {
             position: relative;
-            bottom: 10%;
+            bottom: 6%;
             display: flex;
             flex-direction: column;
-            .contactParragraph {
-                margin-bottom: 2rem;
-                font-size: 1rem;
-                text-align: center;
-                color:rgba(35, 21, 60, .5);
-            }
             .form{
                 display: flex;
                 flex-direction: column;
-                margin: auto;
+                margin: 3rem auto 0 auto;
                 .name {
                     display: flex;
+                    .fName{
+                        width: 60%;
+                        margin-left: .2rem;
+                    }
                     .lname{
                         margin-left: 1rem;
+                        width: 60%;
                     }
                 }
                 .textarea{
                     height: 15vh;
+                    margin-bottom: 1rem;
                 }
             }
         }
         @media all and (min-width: 20rem) and (max-width: 30rem) {
                 background-color: #dfc22c;
                 margin:  1rem auto 0 auto;
-                height: 80vh;
+                height: 100vh;
                 width: 80%;
             .boxContact{
-                bottom: 10%;
+                bottom: 0;
                 .contactHeading{
-                    font-size: 2rem;
-                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                    margin-top: .2rem;
+                    text-align: center;
                 }
-                .boxForm {
-                    bottom: 2%;
+                .contactParragraph {
+                    margin-top: .5rem;
+                    font-size: .6rem;
                 }
             }
             .boxForm {
                 position: relative;
-                bottom: 10%;
+                bottom: 1%;
                 display: flex;
                 flex-direction: column;
-                .contactParragraph {
-                    margin-top: 1rem;
-                    font-size: .4rem;
-                    text-align: center;
-                    color:rgba(35, 21, 60, .5);
-                }
                 .form{
                     display: flex;
                     flex-direction: column;
                     margin: auto;
                     .name {
                         display: flex;
+                        flex-direction: column;
+                        font-size: .8em;
+                        align-items: flex-start;
+                        width: 100%;
+                        .fName{
+                            margin-left: 0rem;
+                            width: 90%;
+                        }
                         .lname{
-                            margin-left: 1rem;
+                            margin-left: 0rem;
+                            width: 90%;
                         }
                     }
                     .textarea{
                         height: 15vh;
+                        width: 90%;
+                        margin-bottom: 2rem;
+                    }
+                    .mail{
+                        width: 85%;
                     }
                 }
             }
@@ -89,35 +105,44 @@
         .boxContact{
             bottom: 10%;
             .contactHeading{
-                font-size: 2rem;
+                font-size: 1rem;
             }
-            .boxForm {
-                bottom: 2%;
+            .contactParragraph {
+                font-size: .6rem;
+                margin-bottom: 1rem;
             }
         }
         .boxForm {
             position: relative;
-            bottom: 10%;
+            bottom: 1%;
             display: flex;
             flex-direction: column;
-            .contactParragraph {
-                margin-top: 1.5rem;
-                font-size: .6rem;
-                text-align: center;
-                color:rgba(35, 21, 60, .5);
-            }
             .form{
                 display: flex;
                 flex-direction: column;
                 margin: auto;
                 .name {
                     display: flex;
+                    flex-direction: column;
+                    font-size: .8em;
+                    align-items: flex-start;
+                    width: 100%;
+                    .fName{
+                        margin-left: 0rem;
+                        width: 90%;
+                    }
                     .lname{
-                        margin-left: 1rem;
+                        margin-left: 0rem;
+                        width: 90%;
                     }
                 }
                 .textarea{
                     height: 15vh;
+                    width: 90%;
+                    margin-bottom: 2rem;
+                }
+                .mail{
+                    width: 85%;
                 }
             }
         }
@@ -131,33 +156,42 @@
             .contactHeading{
                 font-size: 2rem;
             }
-            .boxForm {
-                bottom: 2%;
+            .contactParragraph {
+                font-size: .6rem;
+                margin-bottom: 1rem;
             }
         }
         .boxForm {
             position: relative;
-            bottom: 10%;
+            bottom: 1%;
             display: flex;
             flex-direction: column;
-            .contactParragraph {
-                margin-top: 2rem;
-                font-size: .8rem;
-                text-align: center;
-                color:rgba(35, 21, 60, .6);
-            }
             .form{
                 display: flex;
                 flex-direction: column;
                 margin: auto;
                 .name {
                     display: flex;
+                    flex-direction: column;
+                    font-size: .8em;
+                    align-items: flex-start;
+                    width: 100%;
+                    .fName{
+                        margin-left: 0rem;
+                        width: 90%;
+                    }
                     .lname{
-                        margin-left: 1rem;
+                        margin-left: 0rem;
+                        width: 90%;
                     }
                 }
                 .textarea{
                     height: 15vh;
+                    width: 90%;
+                    margin-bottom: 2rem;
+                }
+                .mail{
+                    width: 85%;
                 }
             }
         }
@@ -171,33 +205,42 @@
             .contactHeading{
                 font-size: 2rem;
             }
-            .boxForm {
-                bottom: 2%;
+            .contactParragraph {
+                font-size: .6rem;
+                margin-bottom: 1rem;
             }
         }
         .boxForm {
             position: relative;
-            bottom: 10%;
+            bottom: 1%;
             display: flex;
             flex-direction: column;
-            .contactParragraph {
-                margin-top: 2rem;
-                font-size: .8rem;
-                text-align: center;
-                color:rgba(35, 21, 60, .6);
-            }
             .form{
                 display: flex;
                 flex-direction: column;
                 margin: auto;
                 .name {
                     display: flex;
+                    flex-direction: column;
+                    font-size: .8em;
+                    align-items: flex-start;
+                    width: 100%;
+                    .fName{
+                        margin-left: 0rem;
+                        width: 90%;
+                    }
                     .lname{
-                        margin-left: 1rem;
+                        margin-left: 0rem;
+                        width: 90%;
                     }
                 }
                 .textarea{
                     height: 15vh;
+                    width: 90%;
+                    margin-bottom: 2rem;
+                }
+                .mail{
+                    width: 85%;
                 }
             }
         }

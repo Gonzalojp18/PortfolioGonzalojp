@@ -803,15 +803,16 @@ body {
 
 .boxSkill {
   position: relative;
-  left: 15%;
-  top: 4.5%;
+  left: 10%;
+  top: 4%;
   height: 40%;
 }
 .boxSkill .containerSkill {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
-  grid-template-rows: 80% 80%;
-  gap: 1em;
+  grid-template-rows: 60% 60%;
+  gap: 0.5em;
+  margin-left: 5%;
 }
 .boxSkill .titleSkill {
   color: #dfc22c;
@@ -856,42 +857,42 @@ body {
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .boxSkill {
     height: 100%;
-    left: 13%;
+    left: 10%;
     top: 3%;
   }
   .boxSkill .containerSkill {
-    grid-template-columns: 60% 60%;
-    grid-template-rows: 40% 40% 40% 40%;
-    gap: 0.2em;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 20% 20% 20% 20%;
+    gap: 0.5em;
   }
   .boxSkill .titleSkill .tech {
-    font-size: 3rem;
-    bottom: 100%;
+    font-size: 2rem;
+    bottom: 98%;
   }
   .boxSkill .titleSkill .tools {
-    right: 99%;
-    font-size: 2.5rem;
+    right: 98%;
+    font-size: 2rem;
   }
   .boxSkill .skill {
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
   }
   .boxSkill .skill .textSkil {
     text-align: center;
-    font-size: 0.6rem;
-    width: 80%;
+    font-size: 0.4rem;
+    width: 100%;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .boxSkill {
     height: 100%;
-    left: 11%;
+    left: 8%;
     top: 3%;
   }
   .boxSkill .containerSkill {
-    grid-template-columns: 60% 60%;
-    grid-template-rows: 40% 40% 40% 40%;
-    gap: 0.2em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30% 30%;
+    gap: 0.4em;
   }
   .boxSkill .titleSkill .tech {
     font-size: 3rem;
@@ -902,8 +903,8 @@ body {
     font-size: 2.5rem;
   }
   .boxSkill .skill {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 100%;
   }
   .boxSkill .skill .textSkil {
     text-align: center;
@@ -918,9 +919,9 @@ body {
     top: 3%;
   }
   .boxSkill .containerSkill {
-    grid-template-columns: 60% 60%;
-    grid-template-rows: 40% 40% 40% 40%;
-    gap: 0.2em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30% 30%;
+    gap: 0.4em;
   }
   .boxSkill .titleSkill .tech {
     font-size: 4rem;
@@ -969,73 +970,73 @@ body {
   background-color: #dfc22c;
   margin: 0 auto 0 30%;
   width: 60%;
-  height: 80vh;
+  height: 85vh;
   border: 0.5em solid #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#contactMe .boxContact {
-  color: #f3f3f3;
-}
 #contactMe .boxContact .contactHeading {
+  color: #f3f3f3;
   font-size: 5rem;
   font-weight: 700;
+  text-align: center;
+}
+#contactMe .boxContact .contactParragraph {
+  font-size: 1rem;
+  text-align: center;
+  color: rgba(35, 21, 60, 0.8);
 }
 #contactMe .boxForm {
   position: relative;
-  bottom: 10%;
+  bottom: 6%;
   display: flex;
   flex-direction: column;
-}
-#contactMe .boxForm .contactParragraph {
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  text-align: center;
-  color: rgba(35, 21, 60, 0.5);
 }
 #contactMe .boxForm .form {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 3rem auto 0 auto;
 }
 #contactMe .boxForm .form .name {
   display: flex;
 }
+#contactMe .boxForm .form .name .fName {
+  width: 60%;
+  margin-left: 0.2rem;
+}
 #contactMe .boxForm .form .name .lname {
   margin-left: 1rem;
+  width: 60%;
 }
 #contactMe .boxForm .form .textarea {
   height: 15vh;
+  margin-bottom: 1rem;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   #contactMe {
     background-color: #dfc22c;
     margin: 1rem auto 0 auto;
-    height: 80vh;
+    height: 100vh;
     width: 80%;
   }
   #contactMe .boxContact {
-    bottom: 10%;
+    bottom: 0;
   }
   #contactMe .boxContact .contactHeading {
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    text-align: center;
   }
-  #contactMe .boxContact .boxForm {
-    bottom: 2%;
+  #contactMe .boxContact .contactParragraph {
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
   }
   #contactMe .boxForm {
     position: relative;
-    bottom: 10%;
+    bottom: 1%;
     display: flex;
     flex-direction: column;
-  }
-  #contactMe .boxForm .contactParragraph {
-    margin-top: 1rem;
-    font-size: 0.4rem;
-    text-align: center;
-    color: rgba(35, 21, 60, 0.5);
   }
   #contactMe .boxForm .form {
     display: flex;
@@ -1044,12 +1045,26 @@ body {
   }
   #contactMe .boxForm .form .name {
     display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #contactMe .boxForm .form .name .fName {
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .name .lname {
-    margin-left: 1rem;
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .textarea {
     height: 15vh;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  #contactMe .boxForm .form .mail {
+    width: 85%;
   }
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
@@ -1062,22 +1077,17 @@ body {
     bottom: 10%;
   }
   #contactMe .boxContact .contactHeading {
-    font-size: 2rem;
+    font-size: 1rem;
   }
-  #contactMe .boxContact .boxForm {
-    bottom: 2%;
+  #contactMe .boxContact .contactParragraph {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
   }
   #contactMe .boxForm {
     position: relative;
-    bottom: 10%;
+    bottom: 1%;
     display: flex;
     flex-direction: column;
-  }
-  #contactMe .boxForm .contactParragraph {
-    margin-top: 1.5rem;
-    font-size: 0.6rem;
-    text-align: center;
-    color: rgba(35, 21, 60, 0.5);
   }
   #contactMe .boxForm .form {
     display: flex;
@@ -1086,12 +1096,26 @@ body {
   }
   #contactMe .boxForm .form .name {
     display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #contactMe .boxForm .form .name .fName {
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .name .lname {
-    margin-left: 1rem;
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .textarea {
     height: 15vh;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  #contactMe .boxForm .form .mail {
+    width: 85%;
   }
 }
 @media all and (min-width: 48rem) and (max-width: 60rem) {
@@ -1106,20 +1130,15 @@ body {
   #contactMe .boxContact .contactHeading {
     font-size: 2rem;
   }
-  #contactMe .boxContact .boxForm {
-    bottom: 2%;
+  #contactMe .boxContact .contactParragraph {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
   }
   #contactMe .boxForm {
     position: relative;
-    bottom: 10%;
+    bottom: 1%;
     display: flex;
     flex-direction: column;
-  }
-  #contactMe .boxForm .contactParragraph {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    text-align: center;
-    color: rgba(35, 21, 60, 0.6);
   }
   #contactMe .boxForm .form {
     display: flex;
@@ -1128,12 +1147,26 @@ body {
   }
   #contactMe .boxForm .form .name {
     display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #contactMe .boxForm .form .name .fName {
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .name .lname {
-    margin-left: 1rem;
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .textarea {
     height: 15vh;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  #contactMe .boxForm .form .mail {
+    width: 85%;
   }
 }
 @media all and (min-width: 60rem) and (max-width: 70rem) {
@@ -1148,20 +1181,15 @@ body {
   #contactMe .boxContact .contactHeading {
     font-size: 2rem;
   }
-  #contactMe .boxContact .boxForm {
-    bottom: 2%;
+  #contactMe .boxContact .contactParragraph {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
   }
   #contactMe .boxForm {
     position: relative;
-    bottom: 10%;
+    bottom: 1%;
     display: flex;
     flex-direction: column;
-  }
-  #contactMe .boxForm .contactParragraph {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    text-align: center;
-    color: rgba(35, 21, 60, 0.6);
   }
   #contactMe .boxForm .form {
     display: flex;
@@ -1170,12 +1198,26 @@ body {
   }
   #contactMe .boxForm .form .name {
     display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #contactMe .boxForm .form .name .fName {
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .name .lname {
-    margin-left: 1rem;
+    margin-left: 0rem;
+    width: 90%;
   }
   #contactMe .boxForm .form .textarea {
     height: 15vh;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  #contactMe .boxForm .form .mail {
+    width: 85%;
   }
 }
 
@@ -1191,10 +1233,17 @@ body {
   font-weight: 200;
   font-size: 2rem;
 }
+.boxFooter p {
+  width: 40%;
+  text-align: center;
+  color: #f3f3f3;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
 .boxFooter .socialMedia {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 30%;
 }
 .boxFooter .socialMedia li {
@@ -1203,15 +1252,19 @@ body {
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   .boxFooter {
     height: 30vh;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
   }
   .boxFooter h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .boxFooter p {
+    width: 80%;
+    font-size: 0.6rem;
   }
   .boxFooter .socialMedia {
     display: flex;
     justify-content: space-around;
-    margin-top: 3rem;
+    margin-top: 0.5rem;
     width: 80%;
   }
   .boxFooter .socialMedia li {
