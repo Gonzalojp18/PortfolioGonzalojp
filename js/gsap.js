@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
 // ABOUT SECTION
 let tl = gsap.timeline({
   scrollTrigger: {
@@ -23,11 +24,12 @@ tl.to('.letter', {
 // PROJECT SECTION
 
 let tlp = gsap.timeline({
+  duration: 3,
   scrollTrigger: {
     trigger: '.mainProject',
     start: "top top",
     pin: true,
-    scrub: 4,
+    scrub: 2,
     repeat: 2, // number of repeats (-1 for infinite)
     repeatDelay: -1, // seconds between repeats
     repeatRefresh: true, // invalidates on each repeat
@@ -37,26 +39,26 @@ let tlp = gsap.timeline({
 tlp.to('.title',{
   x: -800, //each project gonna cross all the screen
   ease: 'power2.out',
-  duration: 0.4,
+  duration: 4,
   delay: 1
 })
 
 tlp.to('.frontEnd',{
-  x: 700, //each project gonna cross all the screen
+  x: 900, //each project gonna cross all the screen
   ease: 'power2.out',
-  duration: 0.2,
+  duration: 4,
   delay: -1
 })
 
 // SCROLL EACH PROJECT
 
 tlp.to('.details',{
-  x: -1500, //each project gonna cross all the screen
+  x: -1200, //each project gonna cross all the screen
   stagger: {
-    each: 1,
-    amount: .6,
-    duration: 10,
-    ease: "slow(0.9, 0.9, false)",
+    each: 2,
+    amount: .2,
+    duration: 2,
+    scrub: 1
   }
 })
 

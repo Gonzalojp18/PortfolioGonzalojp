@@ -4,26 +4,27 @@
     height: 330vh;
     margin-top: 4rem;
     .mainProject{
-        width: 500vw;
+        width: 800vw;
         height: 100vh;
         background-color: #dfc22c;
             .infoProject{
                 width: 30%;
                 height: 50%;
                 position: relative;
-                left: 7%;
+                left: 5%;
                 color:#f3f3f3;
                 display: flex;
+                margin-top: 1.5rem;
                 .details{
                     border-radius: 5%;
-                    margin: 2rem;
-                    width: 15%;
-                    height:60vh;
+                    margin: 0 3rem 4rem 4rem;
+                    width: 8%;
+                    height:50vh;
                     background-color: rgb(236, 166, 4);
                     text-align: center;
                     position: relative;
                     .titlePorject{
-                        padding: 1rem;
+                        padding: .2rem;
                         font-size: 2rem;
                         color:#23153c;
                     }
@@ -35,7 +36,7 @@
             .title{
                 position: relative;
                 padding-top: 0%;
-                left: 13%;
+                left: 8%;
                 font-size: 8rem;
                 font-weight: bold;
                 color: #f3f3f3;
@@ -43,7 +44,7 @@
             .frontEnd {
                 position: absolute;
                 top: 75%;
-                left: 2%;
+                left: 0;
                 h4 {
                     font-size: 5rem;
                     font-weight: bold;

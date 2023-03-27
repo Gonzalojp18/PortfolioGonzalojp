@@ -1,8 +1,9 @@
 .boxSkill{
     position: relative;
     left: 10%;
-    top: 4%;
+    top: 4.5%;
     height: 40%;
+    padding: 2.5rem;
     .containerSkill{
         display: grid;
         grid-template-columns: 20% 20% 20% 20%;
@@ -15,9 +16,8 @@
         font-weight: bold;
         .tech{
             font-size: 6rem;
-            margin-bottom: .3rem;
             position: absolute;
-            bottom: 99%;
+            bottom: 98%;
         }
         .tools{
             writing-mode: vertical-rl;
@@ -25,9 +25,9 @@
             direction: ltr;
             transform: rotate(180deg);
             position: absolute;
-            right: 98.6%;
-            font-size:5rem;
-            font-weight: 500;
+            right: 96%;
+            font-size:4.5rem;
+            font-weight: 600;
             -webkit-text-stroke: 1px #dfc22c;
             color: transparent;
         }
@@ -35,7 +35,7 @@
     .skill {
         background-color: #dfc22c;
         width: 80%;
-        height: 80%;
+        height: 100%;
         border-radius: 1rem;
         padding: 0.2rem;
         box-shadow: #dfc22c 0px 2px 5px;

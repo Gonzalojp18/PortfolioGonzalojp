@@ -9,20 +9,27 @@
     align-items: center;
     .boxContact{
         .contactHeading{
-            color: #f3f3f3;
-            font-size: 5rem;
-            font-weight: 700;
-            text-align: center;
+            writing-mode: vertical-rl;
+            box-orient: vertical;
+            direction: ltr;
+            transform: rotate(180deg);
+            position: absolute;
+            right: 69%;
+            font-size:5rem;
+            font-weight: 650;
+            -webkit-text-stroke: 1px #f3f3f3;
+            color: transparent;
         }
         .contactParragraph {
             font-size: 1rem;
+            margin-top: 4rem;
             text-align: center;
             color:rgba(35, 21, 60, .8);
         }
     }
         .boxForm {
             position: relative;
-            bottom: 6%;
+            bottom: 2%;
             display: flex;
             flex-direction: column;
             .form{
@@ -44,6 +51,9 @@
                     height: 15vh;
                     margin-bottom: 1rem;
                 }
+            }
+            .btn{
+                margin-top: 3rem;
             }
         }
         @media all and (min-width: 20rem) and (max-width: 30rem) {

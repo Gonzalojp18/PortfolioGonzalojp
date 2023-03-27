@@ -68,6 +68,7 @@
   transform: rotate(180deg);
   top: 80%;
   left:0%;
+  z-index: 100;
   @media all and (min-width: 20rem) and (max-width: 29rem){display: none;}
   @media all and (min-width: 30rem) and (max-width: 48rem){  left:0;}
   @media all and (min-width: 48rem) and (max-width: 60rem){ left:0;}
@@ -81,6 +82,7 @@
   transform: rotate(180deg);
   top: 80%;
   left: 98.5%;
+
   @media all and (min-width: 20rem) and (max-width: 29rem){display: none;}
   @media all and (min-width: 30rem) and (max-width: 48rem)
   { left:97%;}

@@ -369,6 +369,7 @@ body {
   transform: rotate(180deg);
   top: 80%;
   left: 0%;
+  z-index: 100;
 }
 @media all and (min-width: 20rem) and (max-width: 29rem) {
   .scrollDownleft {
@@ -661,7 +662,7 @@ body {
   margin-top: 4rem;
 }
 .main .mainProject {
-  width: 500vw;
+  width: 800vw;
   height: 100vh;
   background-color: #dfc22c;
 }
@@ -669,21 +670,22 @@ body {
   width: 30%;
   height: 50%;
   position: relative;
-  left: 7%;
+  left: 5%;
   color: #f3f3f3;
   display: flex;
+  margin-top: 1.5rem;
 }
 .main .mainProject .infoProject .details {
   border-radius: 5%;
-  margin: 2rem;
-  width: 15%;
-  height: 60vh;
+  margin: 0 3rem 4rem 4rem;
+  width: 8%;
+  height: 50vh;
   background-color: rgb(236, 166, 4);
   text-align: center;
   position: relative;
 }
 .main .mainProject .infoProject .details .titlePorject {
-  padding: 1rem;
+  padding: 0.2rem;
   font-size: 2rem;
   color: #23153c;
 }
@@ -693,7 +695,7 @@ body {
 .main .mainProject .title {
   position: relative;
   padding-top: 0%;
-  left: 13%;
+  left: 8%;
   font-size: 8rem;
   font-weight: bold;
   color: #f3f3f3;
@@ -701,7 +703,7 @@ body {
 .main .mainProject .frontEnd {
   position: absolute;
   top: 75%;
-  left: 2%;
+  left: 0;
 }
 .main .mainProject .frontEnd h4 {
   font-size: 5rem;
@@ -804,8 +806,9 @@ body {
 .boxSkill {
   position: relative;
   left: 10%;
-  top: 4%;
+  top: 4.5%;
   height: 40%;
+  padding: 2.5rem;
 }
 .boxSkill .containerSkill {
   display: grid;
@@ -820,9 +823,8 @@ body {
 }
 .boxSkill .titleSkill .tech {
   font-size: 6rem;
-  margin-bottom: 0.3rem;
   position: absolute;
-  bottom: 99%;
+  bottom: 98%;
 }
 .boxSkill .titleSkill .tools {
   writing-mode: vertical-rl;
@@ -830,16 +832,16 @@ body {
   direction: ltr;
   transform: rotate(180deg);
   position: absolute;
-  right: 98.6%;
-  font-size: 5rem;
-  font-weight: 500;
+  right: 96%;
+  font-size: 4.5rem;
+  font-weight: 600;
   -webkit-text-stroke: 1px #dfc22c;
   color: transparent;
 }
 .boxSkill .skill {
   background-color: #dfc22c;
   width: 80%;
-  height: 80%;
+  height: 100%;
   border-radius: 1rem;
   padding: 0.2rem;
   box-shadow: #dfc22c 0px 2px 5px;
@@ -977,19 +979,26 @@ body {
   align-items: center;
 }
 #contactMe .boxContact .contactHeading {
-  color: #f3f3f3;
+  writing-mode: vertical-rl;
+  box-orient: vertical;
+  direction: ltr;
+  transform: rotate(180deg);
+  position: absolute;
+  right: 69%;
   font-size: 5rem;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 650;
+  -webkit-text-stroke: 1px #f3f3f3;
+  color: transparent;
 }
 #contactMe .boxContact .contactParragraph {
   font-size: 1rem;
+  margin-top: 4rem;
   text-align: center;
   color: rgba(35, 21, 60, 0.8);
 }
 #contactMe .boxForm {
   position: relative;
-  bottom: 6%;
+  bottom: 2%;
   display: flex;
   flex-direction: column;
 }
@@ -1012,6 +1021,9 @@ body {
 #contactMe .boxForm .form .textarea {
   height: 15vh;
   margin-bottom: 1rem;
+}
+#contactMe .boxForm .btn {
+  margin-top: 3rem;
 }
 @media all and (min-width: 20rem) and (max-width: 30rem) {
   #contactMe {
