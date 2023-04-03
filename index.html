@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <span class="mensagge" id="mensagge"></span>
         <div id="loading">
             <div class="custom-loader"></div>
             <div>Gonzalo Palomo</div>
@@ -44,7 +45,7 @@
                 <div class="name sm-6">
                     <p class="hi" data-aos="zoom-out" data-aos-delay="5" data-aos-duration="1000"><span
                             class="hi">Hola,</span> soy</p>
-                    <h1 class="name" data-aos="zoom-out" data-aos="zoom-out" data-aos-delay="6" data-aos-duration="2000"
+                    <h1 id="nameMain" class="name" data-aos="zoom-out" data-aos="zoom-out" data-aos-delay="6" data-aos-duration="2000"
                         data-aos-easing="ease-in">
                         Gonzalo Palomo</h1>
                     <p class="quote" data-aos="zoom-out" data-aos="zoom-out" data-aos-delay="6" data-aos-duration="2000"
@@ -52,12 +53,17 @@
                     <p class="intro" data-aos="zoom-out" data-aos="zoom-out" data-aos-delay="5"
                         data-aos-duration="3000">Bienvenido, este sitio web es más que un simple portafolio. Es un
                         espacio para conocer más a la persona que está detrás de todo el trabajo. Conóceme mejor.</p>
-                    <a class="btn" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="7" href="">Comenzar</a>
+                    <a id="open-window-btn" class="btn" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="7" href="">Comenzar</a>
+                </div>
+                <div class="welcome form-floating" id="welcome">
+                    <label id="label" for="">Hola, personalicemos tu experiencia. Este paso se configura una sola vez.</label>
+                        <input id="name" type="text" placeholder="Como te llamas?">
+                    <button type="button" id="sendName">Listo</button>
                 </div>
             </section>
         </section>
     </header>
-    <section class="sectionMain" id="aboutMe">
+    <section class="sectionMain container" id="aboutMe">
         <nav class="sticky">
             <ul class="iconMenu">
                 <li><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
@@ -176,7 +182,7 @@
                             class="fa-solid fa-angles-up fa-beat-fade" value="scroll"></i></i></span>
             </div>
         </section>
-        <section class=boxSkill>
+        <section class='boxSkill container'>
             <div class="titleSkill">
                 <h2 class="tech">Tecnologias</h2>
                 <p class="tools">Herramientas&</p>
@@ -230,7 +236,7 @@
         </div>
         </section>
     </main>
-    <section id="contactMe">
+    <section class="container" id="contactMe">
         <div class="boxContact">
             <h5 class="contactHeading">HABLEMOS</h5>
             <p class=contactParragraph>"Alone we can do so little together we can do so much" - Hellen Keller
