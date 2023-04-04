@@ -68,7 +68,7 @@ let mm = gsap.matchMedia();
 // set up the alternating up and down movement
 
 tlp.to('.details', {
-  x: -2000, // move horizontally by 100 pixels
+  x: -2500, // move horizontally by 100 pixels
   });
 
 })

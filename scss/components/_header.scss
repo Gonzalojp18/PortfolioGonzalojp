@@ -68,7 +68,7 @@
         .homeName {
             width: 80%;
             visibility: visible;
-            padding: 90% 0 0 2%;
+            padding: 98% 0 0 2%;
             .name {
                 .hi {
                     font-size: 1rem;
@@ -83,14 +83,15 @@
                 .quote {
                     font-size: 1rem;
                     width: 80%;
-                    padding: 0;
+                    padding: .5rem 0 .5rem 0;
                     font-weight: 600;
                 }
                 .intro {
                     width: 100%;
                     font-size: .6rem;
-                    margin: 0;
+                    padding: .5rem 0 .5rem 0;
                     font-weight: 200;
+                    margin: 0;
                 }
                 .btn {
                     width: 50%;
@@ -103,7 +104,7 @@
     @media all and (min-width: 30rem) and (max-width: 48rem) {
         .homeName {
             width: 80%;
-            padding: 90% 0 0 2%;
+            padding: 95% 0 0 2%;
             .name {
                 .hi {
                     font-size: 2rem;

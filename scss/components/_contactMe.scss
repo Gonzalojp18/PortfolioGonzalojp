@@ -58,7 +58,7 @@
         }
         @media all and (min-width: 20rem) and (max-width: 30rem) {
                 background-color: #dfc22c;
-                margin:  2rem auto 0 auto;
+                margin:  4rem auto 0 auto;
                 height: 70vh;
                 width: 90%;
             .boxContact{
@@ -69,7 +69,7 @@
                         transform: rotate(0deg);
                         position: relative;
                         right: 6%;
-                        bottom: 50%;
+                        bottom: 40%;
                         font-size:3rem;
                         font-weight: 600;
                         -webkit-text-stroke: 1px #f3f3f3;
@@ -126,7 +126,6 @@
             margin:  1rem auto 0 auto;
             height: 60vh;
             width: 80%;
-            background-color: red;
             .boxContact{
                 .contactHeading{
                     writing-mode:horizontal-tb;
@@ -136,7 +135,7 @@
                     position: relative;
                     right: 6%;
                     bottom: 50%;
-                    font-size:3rem;
+                    font-size:3.5rem;
                     font-weight: 600;
                     -webkit-text-stroke: 1px #f3f3f3;
                     color: transparent;
@@ -151,22 +150,22 @@
         .boxForm {
             position: relative;
             bottom: 15%;
-            width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             .form{
                 display: flex;
                 flex-direction: column;
                 margin: auto;
+                width: 70%;
                 .name {
                     display: flex;
                     flex-direction: column;
                     font-size: .8em;
                     align-items: flex-start;
-                    width: 100%;
+                    margin: auto;
                     .fName{
                         margin-left: 0rem;
-                        width: 100%;
                     }
                     .lname{
                         margin-left: 0rem;
@@ -174,12 +173,14 @@
                     }
                 }
                 .textarea{
+                    margin: auto;
                     height: 15vh;
-                    width: 97%;
+                    width: 100%;
                     margin-bottom: 2rem;
                 }
                 .mail{
-                    width: 97%;
+                    width: 100%;
+                    margin: auto;
                 }
             }
         }

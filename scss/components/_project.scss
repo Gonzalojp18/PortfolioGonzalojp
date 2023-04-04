@@ -64,13 +64,13 @@
                     left: 2%;
                     .details {
                         margin: 2rem;
-                        width: 50%;
+                        width: 40%;
                         height: 100%;
                         .titlePorject {
                             padding: .2rem;
                         }
                         img {
-                            width: 100%;
+                            width: 80%;
                         }
                     }
                 }
@@ -89,19 +89,19 @@
         }
 
     }
-    @media all and (min-width: 31rem) and (max-width: 48rem){
+    @media all and (min-width: 30rem) and (max-width: 48rem){
         .mainProject {
             .infoProject {
                 font-size: .8rem;
                 width: 90%;
                 .details {
                     margin: 2rem;
-                    width: 40%;
-                    .titlePorject {
+                    width: 20%;
+                    .titlePorject{
                         padding: .5rem;
                     }
-                    img {
-                        width: 100%;
+                    img{
+                        width: 40%;
                     }
                 }
             }
