@@ -302,37 +302,6 @@ body {
   position: sticky;
 }
 
-.welcome {
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  right: 20%;
-  height: 40vh;
-  bottom: 70%;
-  min-width: 50%;
-  color: #cad6dd;
-  border-radius: 1rem;
-  font-size: 0.9em;
-  background-color: rgba(202, 214, 221, 0.2);
-}
-
-#mensagge {
-  all: unset;
-  border-radius: 1rem;
-  min-height: 15%;
-  min-width: 15%;
-  box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
-  border-radius: 1rem;
-  color: #cad6dd;
-  clip-path: circle(0 at 100% 0);
-  text-align: center;
-  font-size: 1rem;
-  padding-top: 1.5rem;
-}
-
 .active {
   clip-path: circle(115% at 16% 120%);
 }
@@ -1322,6 +1291,131 @@ body {
   .boxFooter .socialMedia li {
     list-style: none;
   }
+}
+
+.welcome {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  height: 40vh;
+  min-width: 50%;
+  color: #cad6dd;
+  border-radius: 1rem;
+  font-size: 0.9em;
+  background-color: rgba(202, 214, 221, 0.2);
+}
+.welcome label {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.welcome button {
+  border: none;
+  margin: 6rem 0 0 0;
+  min-width: 20%;
+  padding: 0.2rem;
+  border-radius: 2rem;
+  color: #afafbc;
+  background-color: #dc1835;
+}
+.welcome button:hover {
+  background-color: #dc1835;
+  transition: all 0.4s ease-in-out;
+  color: #afafbc;
+  border: 2px solid #afafbc;
+}
+.welcome input {
+  border: none;
+  margin: 4rem 0 0 0;
+  all: unset;
+  width: 60%;
+  color: #afafbc;
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.welcome input:hover {
+  background: none;
+  border: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .welcome {
+    bottom: 10%;
+    width: 100%;
+    height: 40vh;
+    left: 50%;
+  }
+  .welcome button {
+    font-size: 0.8em;
+    width: 30%;
+    padding: 0.5em;
+    margin: 1rem auto 1rem auto;
+  }
+  .welcome input {
+    width: 100%;
+    font-size: 0.6rem;
+    margin: 2.5rem auto 1rem auto;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .welcome {
+    bottom: 20%;
+    width: 100%;
+    height: 40vh;
+    left: 50%;
+  }
+  .welcome button {
+    font-size: 0.8em;
+    width: 30%;
+    padding: 0.5em;
+    margin: 1rem auto 1rem auto;
+  }
+  .welcome input {
+    width: 100%;
+    font-size: 0.6rem;
+    margin: 2.5rem auto 1rem auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 920px) {
+  .welcome {
+    bottom: 20%;
+    width: 100%;
+    height: 40vh;
+    left: 30%;
+  }
+  .welcome button {
+    font-size: 0.8em;
+    width: 30%;
+    padding: 0.5em;
+    margin: 1rem auto 1rem auto;
+  }
+  .welcome input {
+    width: 100%;
+    font-size: 0.6rem;
+    margin: 2.5rem auto 1rem auto;
+  }
+}
+
+.mensagge {
+  border-radius: 1rem;
+  min-height: 30%;
+  min-width: 30%;
+  box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
+  border-radius: 1rem;
+  color: #cad6dd;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 1.5rem;
+  position: relative;
+  top: 50%;
+  left: 15%;
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

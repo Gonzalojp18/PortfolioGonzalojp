@@ -1,39 +1,7 @@
+
 // pin of project
 .stickProject{
   position: sticky;
-}
-
-// input welcome
-.welcome {
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  right: 20%;
-  height: 40vh;
-  bottom: 70%;
-  min-width: 50%;
-  color: #cad6dd;
-  border-radius: 1rem;
-  font-size: 0.9em;
-  background-color: rgba(202, 214, 221, 0.2);
-}
-
-// Bienvenida
-#mensagge {
-  all: unset;
-  border-radius: 1rem;
-  min-height: 15%;
-  min-width: 15%;
-  box-shadow: rgba(228, 223, 224, 0.9) 0px 2px 4px 0px, rgba(244, 233, 248, 0.9);
-  border-radius: 1rem;
-  color: #cad6dd;
-  clip-path: circle(0 at 100% 0);
-  text-align: center;
-  font-size: 1rem;
-  padding-top: 1.5rem;
 }
 
 
