@@ -49,6 +49,7 @@ html * {
 
 body {
   background-color: #24153e;
+  overflow-x: hidden;
 }
 
 .header {
@@ -405,7 +406,7 @@ body {
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .scrollDownright {
-    left: 97%;
+    left: 96%;
   }
 }
 .description * {
@@ -458,7 +459,7 @@ body {
 }
 @media all and (min-width: 48rem) and (max-width: 60rem) {
   .scrollDownRightProject {
-    left: 23%;
+    left: 20%;
     height: 70%;
   }
 }
@@ -672,6 +673,7 @@ body {
   color: #f3f3f3;
   display: flex;
   margin-top: 1.5rem;
+  overflow: hidden;
 }
 .main .mainProject .infoProject .details {
   border-radius: 5%;

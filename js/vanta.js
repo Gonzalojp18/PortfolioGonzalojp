@@ -10,4 +10,4 @@ VANTA.GLOBE({
     color2: 0xcad6dd,
     color: 0xFD2155,
     backgroundColor: 0x23153c,
-  })
+})

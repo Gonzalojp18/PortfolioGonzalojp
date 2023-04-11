@@ -9,8 +9,6 @@ let label = document.getElementById('label');
 let inputName = document.querySelector('[data-input-name]');
 
 
-
-
 next.addEventListener('click', (e) => {
     e.preventDefault();
     let tlCard = gsap.timeline({ delay: .1, ease: 'elastic'});
@@ -34,8 +32,11 @@ send.addEventListener("click", (e) => {
 
 send.addEventListener('click', () =>{
     setTimeout(() => {
-    window.location.href = "#aboutMe";
-}, 5000);
+        nav.classList.toggle('active');
+}, 100);
+if((nav.style.visibility === 'visible')){
+    mensagge.style.visibility = 'hidden';
+}
 });
 
 
