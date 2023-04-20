@@ -25,6 +25,7 @@ send.addEventListener("click", (e) => {
     }else{
         label.innerHTML =
         `<p>Bienvenido!</p>`;
+        label.classList.add("fs-1");
         inputName.innerHTML = `<span>${name}</span>`;
     }
     send.textContent = 'Continuar';
@@ -33,9 +34,9 @@ send.addEventListener("click", (e) => {
 send.addEventListener('click', () =>{
     setTimeout(() => {
         nav.classList.toggle('active');
-}, 100);
-if((nav.style.visibility === 'visible')){
-    mensagge.style.visibility = 'hidden';
+}, 500);
+if((nav.style.visibility == 'visible')){
+    welcome.classList.toggle('welcome');
 }
 });
 

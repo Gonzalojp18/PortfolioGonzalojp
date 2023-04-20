@@ -3,7 +3,7 @@
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     bottom: 10%;
@@ -14,13 +14,11 @@
     border-radius: 1rem;
     font-size: 0.9em;
     background-color: rgba(202, 214, 221, 0.2);
-
     label {
         width: 100%;
         text-align: center;
         font-size: .8rem;
     }
-
     button {
         border: none;
         margin: 6rem 0 0 0;
@@ -29,7 +27,6 @@
         border-radius: 2rem;
         color: #afafbc;
         background-color: #dc1835;
-
         &:hover {
             background-color: #dc1835;
             transition: all 0.4s ease-in-out;
@@ -37,16 +34,16 @@
             border: 2px solid #afafbc;
         }
     }
-
     input {
         border: none;
-        margin: 4rem 0 0 0;
         all: unset;
+        position: relative;
+        top: 25%;
         width: 60%;
         color: #afafbc;
         border: none;
         background: none;
-        font-size: 0.9rem;
+        font-size: 2rem;
         text-align: center;
 
         &:hover {
@@ -71,8 +68,7 @@
             }
             input {
             width: 100%;
-            font-size: 0.8rem;
-            margin: 2.5rem auto 1rem auto;
+            font-size: 1rem;
         }
     }
 
@@ -92,8 +88,7 @@
         }
         input {
         width: 100%;
-        font-size: 0.6rem;
-        margin: 2.5rem auto 1rem auto;
+        font-size: 1rem;
     }
     }
 
@@ -113,8 +108,7 @@
         }
         input {
         width: 100%;
-        font-size: 0.6rem;
-        margin: 2.5rem auto 1rem auto;
+        font-size: 1rem;
     }
     }
 }
