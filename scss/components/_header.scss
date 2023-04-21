@@ -103,24 +103,24 @@
 
     @media all and (min-width: 30rem) and (max-width: 48rem) {
         .homeName {
-            width: 80%;
-            padding: 70% 0 0 2%;
+            width: 90%;
+            padding: 75% 0 0 2%;
             .name {
                 .hi {
                     font-size: 2rem;
                     font-weight: 500;
                 }
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                 }
                 .quote {
                     font-size: 1.5rem;
                     padding: 0;
                 }
                 .intro {
-                    width: 80%;
+                    width: 100%;
                     font-size: 1rem;
-                    margin: 0 0 .2rem 0;
+                    margin: .5rem 0 .5rem 0;
                 }
                 .btn {
                     width: 50%;

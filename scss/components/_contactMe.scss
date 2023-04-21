@@ -21,8 +21,8 @@
             color: transparent;
         }
         .contactParragraph {
-            font-size: 1rem;
-            margin-top: 4rem;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
             text-align: center;
             color:rgba(35, 21, 60, .8);
         }
@@ -103,7 +103,7 @@
             }
         }
         @media all and (min-width: 30rem) and (max-width: 48rem) {
-            margin:  1rem auto 0 auto;
+            margin:  .5rem auto 0 auto;
             height: 60vh;
             width: 80%;
             .boxContact{
@@ -121,9 +121,6 @@
                     color: transparent;
                 }
             .contactParragraph{
-                position: relative;
-                right: 0%;
-                bottom:40%;
                 font-size: 1rem;
             }
         }

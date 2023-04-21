@@ -148,24 +148,24 @@ body {
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   .header .homeName {
-    width: 80%;
-    padding: 70% 0 0 2%;
+    width: 90%;
+    padding: 75% 0 0 2%;
   }
   .header .homeName .name .hi {
     font-size: 2rem;
     font-weight: 500;
   }
   .header .homeName .name h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .header .homeName .name .quote {
     font-size: 1.5rem;
     padding: 0;
   }
   .header .homeName .name .intro {
-    width: 80%;
+    width: 100%;
     font-size: 1rem;
-    margin: 0 0 0.2rem 0;
+    margin: 0.5rem 0 0.5rem 0;
   }
   .header .homeName .name .btn {
     width: 50%;
@@ -992,8 +992,8 @@ body {
   color: transparent;
 }
 #contactMe .boxContact .contactParragraph {
-  font-size: 1rem;
-  margin-top: 4rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
   text-align: center;
   color: rgba(35, 21, 60, 0.8);
 }
@@ -1073,7 +1073,7 @@ body {
 }
 @media all and (min-width: 30rem) and (max-width: 48rem) {
   #contactMe {
-    margin: 1rem auto 0 auto;
+    margin: 0.5rem auto 0 auto;
     height: 60vh;
     width: 80%;
   }
@@ -1091,9 +1091,6 @@ body {
     color: transparent;
   }
   #contactMe .boxContact .contactParragraph {
-    position: relative;
-    right: 0%;
-    bottom: 40%;
     font-size: 1rem;
   }
   #contactMe .boxForm {
