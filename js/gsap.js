@@ -23,12 +23,20 @@ tl.to('.letter', {
 
 // PROJECT SECTION
 
+
+
+// gsap.set(".mainProject", {opacity: 1});
+
+// gsap.timeline().from('.infoProject', {scale: 1})
+
+
 let tlp = gsap.timeline({
   duration: 3,
   scrollTrigger: {
-    trigger: '.mainProject',
+    trigger: '.infoProject',
     start: "top top",
     pin: true,
+    paused: true,
     scrub: 2,
     repeat: 2, // number of repeats (-1 for infinite)
     repeatDelay: -1, // seconds between repeats
